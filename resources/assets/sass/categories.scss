@@ -34,7 +34,7 @@
       }
     }
     .centred {
-
+      @include text-position(150px, 30px, $bootstrap-xs);
       @include text-position(150px, 30px, $bootstrap-sm);
 
       p {
@@ -75,6 +75,7 @@
 
     .stationery-block {
       text-align: center;
+      @include text-position(200px, 175px, $bootstrap-xs);
       @include text-position(200px, 175px, $bootstrap-sm);
 
       .stationery-btn {

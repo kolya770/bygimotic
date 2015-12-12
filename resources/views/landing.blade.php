@@ -26,10 +26,10 @@
                         <div class="col-xs-10 col-xs-offset-1">
                             <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 
-                            <div class="col-xs-5">
+                            <div class="col-xs-12 col-sm-5">
                                 <iframe  class="video center-block" src="https://www.youtube.com/embed/aQ-2JkcdbQA" frameborder="0" allowfullscreen></iframe>
                             </div>
-                            <div class="col-xs-6">
+                            <div class="col-xs-12 col-sm-6">
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arc
                                     itecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
                                     sit aspernatur aut odit aut fugit,</p>
@@ -52,13 +52,13 @@
                         <div class="col-xs-10 col-xs-offset-1">
                             <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore </p>
-                            <div class="col-xs-4 center-image">
+                            <div class="col-xs-12 col-sm-4 center-image">
                                 <img src="img/image.png">
                             </div>
-                            <div class="col-xs-4 center-image">
+                            <div class="col-xs-12 col-sm-4 center-image">
                                 <img src="img/image.png">
                             </div>
-                            <div class="col-xs-4 center-image">
+                            <div class="col-xs-12 col-sm-4 center-image">
                                 <img src="img/image.png">
                             </div>
                         </div>

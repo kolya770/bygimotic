@@ -438,6 +438,15 @@ footer {
       background-color: rgba(0, 0, 0, 0.9); }
       .categories .image-click .background-2 img {
         opacity: 0.1; }
+    @media (max-width: 767px) {
+      .categories .image-click .centred {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 30px;
+        margin-left: -75px;
+        margin-top: -15px; } }
     @media (min-width: 768px) {
       .categories .image-click .centred {
         position: absolute;
@@ -477,6 +486,15 @@ footer {
       margin-top: 10px; }
     .categories .image-click .stationery-block {
       text-align: center; }
+      @media (max-width: 767px) {
+        .categories .image-click .stationery-block {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200px;
+          height: 175px;
+          margin-left: -100px;
+          margin-top: -87.5px; } }
       @media (min-width: 768px) {
         .categories .image-click .stationery-block {
           position: absolute;
