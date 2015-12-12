@@ -1,0 +1,66 @@
+.contact {
+  background-color: $white;
+  border-radius: 15px;
+  z-index: 1;
+  padding: 0;
+
+  h2 {
+    font-family: $font-R-black;
+    color: #9063a6;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: center;
+    margin: 70px 0 75px 0;
+    padding: 0 10%;
+  }
+
+  .text {
+    font-family: $font-R-regular;
+    color: #4f5e69;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 90px;
+  }
+
+  .info {
+    font-family: $font-R-black;
+    color: #4f5e69;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 90px;
+  }
+
+  .write-btn {
+    background-color: #9063a6;
+    width: 175px;
+    height: 40px;
+    border-radius: 50px;
+    margin-bottom: -15px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    margin-left: -82.5px;
+    margin-top: -20px;
+    font-family: $font-R-black;
+    color: #ffffff;
+    font-size: 18.38px;
+    font-weight: 900;
+    line-height: 15px;
+    text-align: center;
+    transform: scaleX(1.0001);
+  }
+
+  .map {
+    padding: 0;
+    margin-bottom: 90px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+#first-screen {
+  height: 100vh;
+
+  .logo {
+    left: 50%;
+    z-index: 3;
+    @include content-position(218px, 11vh, $bootstrap-xs);
+    @include content-position(218px, 11vh, $bootstrap-sm);
+    @include content-position(270px, 10vh, $bootstrap-xl);
+
+    @media #{$bootstrap-xl} {
+      img {
+        width: 270px;
+      }
+    }
+
+  }
+  .houses {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .rainbow {
+    left: 50%;
+    @include content-position(72%, 11vh, $bootstrap-xs);
+    @include content-position(72%, 11vh, $bootstrap-sm);
+    @include content-position(1050px, 14vh, $bootstrap-xl);
+  }
+  .first-cloud {
+    position: absolute;
+    top:22%;
+    left:2%;
+    width: 6%;
+  }
+  .second-cloud {
+    position: absolute;
+    top: 11%;
+    left: 25%;
+    width: 6%;
+  }
+  .third-cloud {
+    position: absolute;
+    left: 53%;
+    top: 7%;
+  }
+  .fourth-cloud {
+    position: absolute;
+    right: 18%;
+    top: 11%;
+    width: 7.5%;
+  }
+  .fifth-cloud {
+    position: absolute;
+    right: 3%;
+    top:22%;
+    width: 6%;
+  }
+}

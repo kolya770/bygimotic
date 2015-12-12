@@ -1,0 +1,43 @@
+.categories-article {
+  background-color: $white;
+  border-radius: 15px;
+  z-index: 1;
+  padding: 0;
+
+  h2 {
+    font-family: $font-R-black;
+    color:  #9063a6;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: center;
+    margin: 70px 0 75px 0;
+    padding: 0 10%;
+  }
+
+  .girl {
+    padding: 0;
+    margin-bottom: 70px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .text-block {
+
+    p {
+      font-family: $font-R-regular;
+      color:  #4f5e69;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    .text-content-2 {
+      margin: 30px 0 70px 0;
+    }
+
+  }
+
+}
