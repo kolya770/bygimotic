@@ -1,84 +1,106 @@
-.navbar-bygimotic {
-  border-radius: 10px;
-  border: none;
-  background-color:  #ffffff;
-  left: 50%;
-  height: 60px;
-  z-index: 2;
-  @include content-position(76%, 30vh, $bootstrap-xs);
-  @include content-position(76%, 30vh, $bootstrap-sm);
-  @include content-position(1175px, 30vh, $bootstrap-xl);
-
-  .my-navbar {
-
-    @media #{$bootstrap-xs} {
-      width: auto;
-    }
-
-    @media #{$bootstrap-sm} {
-      width: auto;
-    }
-  }
-
+.full-navbar {
+  text-align: center;
+  margin-top: 15vh;
   .rainbow {
     left: 50%;
-    @include content-position(72%, -118px, $bootstrap-xs);
-    @include content-position(72%, -118px, $bootstrap-sm);
-    @include content-position(88%, -18.6vh, $bootstrap-lg);
-    @include content-position(1050px, -165px, $bootstrap-xl);
+    max-width: 1175px;
+    @media #{$bootstrap-xs} {
+      width: 65%;
+    }
+    @media #{$bootstrap-sm} {
+      width: 120vh;
+    }
+    @media #{$bootstrap-md} {
+      width: 120vh;
+    }
+    @media #{$bootstrap-lg} {
+      width: 125vh;
+    }
+    @media #{$bootstrap-xl} {
+      width: 120vh;
+    }
+    //@include content-position(72%, -118px, $bootstrap-xs);
+    //@include content-position(72%, -118px, $bootstrap-sm);
+    //@include content-position(88%, -18.6vh, $bootstrap-lg);
+    //@include content-position(1050px, -165px, $bootstrap-xl);
   }
 
-  .navbar-nav {
-    .my-menu {
-      box-shadow: 0 0 19px 0 rgba(46, 40, 38, 0.3);
-      border-radius: 10px;
-      background-color:  #ffffff;
-      width: 200px;
-      height: 281px;
-      border: none;
+  .navbar-bygimotic {
+    border-radius: 10px;
+    border: none;
+    background-color:  #ffffff;
+    //left: 50%;
+    height: 60px;
+    z-index: 2;
+    width: 76%;
+    max-width: 1175px;
+    //@include content-position(76%, 30vh, $bootstrap-xs);
+    //@include content-position(76%, 30vh, $bootstrap-sm);
+    //@include content-position(1175px, 30vh, $bootstrap-xl);
 
-      a {
-        font-family: $font-R-black;
-        color:  #9063a6;
-        font-size: 11px;
-        font-weight: 900;
-        line-height: 20px;
-        text-align: left;
-        text-transform: uppercase;
-        margin-bottom: 14px;
+    .my-navbar {
+
+      @media #{$bootstrap-xs} {
+        width: auto;
       }
 
-      li {
-        margin: 0;
+      @media #{$bootstrap-sm} {
+        width: auto;
       }
     }
-    li {
-      @media #{$bootstrap-md} {
-        margin: 0 15px 0 15px;
-      }
 
-      @media #{$bootstrap-lg} {
-        margin: 0 30px 0 30px;
-      }
+    .navbar-nav {
+      .my-menu {
+        box-shadow: 0 0 19px 0 rgba(46, 40, 38, 0.3);
+        border-radius: 10px;
+        background-color:  #ffffff;
+        width: 200px;
+        height: 281px;
+        border: none;
 
-      @media #{$bootstrap-xl} {
-        margin: 0 50px 0 50px;
+        a {
+          font-family: $font-R-black;
+          color:  #9063a6;
+          font-size: 11px;
+          font-weight: 900;
+          line-height: 20px;
+          text-align: left;
+          text-transform: uppercase;
+          margin-bottom: 14px;
+        }
+
+        li {
+          margin: 0;
+        }
       }
-      font-family: $font-R-black;
-      a {
-        color: #9063a6;
-        font-size: 13.5px;
-        font-weight: 900;
-        text-align: center;
-        transform: scaleX(1.0086);
-        text-transform: uppercase;
-        line-height: 30px;
-      }
-      .orange-btn {
-        color: #ff6a21;
-      }
-      .position-cn {
-        padding-right: 33px;
+      li {
+        @media #{$bootstrap-md} {
+          margin: 0 15px 0 15px;
+        }
+
+        @media #{$bootstrap-lg} {
+          margin: 0 30px 0 30px;
+        }
+
+        @media #{$bootstrap-xl} {
+          margin: 0 50px 0 50px;
+        }
+        font-family: $font-R-black;
+        a {
+          color: #9063a6;
+          font-size: 13.5px;
+          font-weight: 900;
+          text-align: center;
+          transform: scaleX(1.0086);
+          text-transform: uppercase;
+          line-height: 30px;
+        }
+        .orange-btn {
+          color: #ff6a21;
+        }
+        .position-cn {
+          padding-right: 33px;
+        }
       }
     }
   }

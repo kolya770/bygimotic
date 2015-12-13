@@ -4,11 +4,16 @@
   .logo {
     left: 50%;
     z-index: 3;
-    @include content-position(218px, 11vh, $bootstrap-xs);
+    @include content-position(110px, 11vh, $bootstrap-xs);
     @include content-position(218px, 11vh, $bootstrap-sm);
     @include content-position(270px, 10vh, $bootstrap-xl);
 
-    @media #{$bootstrap-xl} {
+    @media #{$bootstrap-xs} {
+      img {
+        width: 100%;
+      }
+    }
+    @media #{$bootstrap-sm} {
       img {
         width: 270px;
       }
@@ -22,12 +27,6 @@
     z-index: 1;
     width: 100%;
   }
-  //.rainbow {
-  //  left: 50%;
-  //  @include content-position(72%, 11vh, $bootstrap-xs);
-  //  @include content-position(72%, 11vh, $bootstrap-sm);
-  //  @include content-position(1050px, 14vh, $bootstrap-xl);
-  //}
   .first-cloud {
     position: absolute;
     top:22%;

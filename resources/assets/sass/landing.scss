@@ -15,11 +15,11 @@
 
   @media #{$bootstrap-xl} {
     .content-width {
-      width: 1175px;
+      max-width: 1175px;
     }
   }
 
-  margin-top: -50vh;
+  margin-top: -90vh;
   margin-bottom: 70px;
 
   .first-block {
