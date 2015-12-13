@@ -3,14 +3,21 @@ footer {
   border-top-right-radius: 15px;
   background-color:  #9063a6;
 
-  p{
+  p {
     font-family: $font-R-regular;
     color:  #ffffff;
     font-size: 16px;
     line-height: 24px;
-    text-align: left;
     font-weight: 300;
-    margin: 40px 0 40px 40px;
+    @media #{$bootstrap-xs} {
+      text-align: center;
+      margin: 40px 0 0 0;
+    }
+    @media #{$bootstrap-sm} {
+      text-align: left;
+      margin: 40px 0 40px 40px;
+    }
+
   }
   .right-ft {
     margin: 30px 0 10px 0;
@@ -21,10 +28,15 @@ footer {
     font-size: 18px;
     font-weight: 900;
     line-height: 24px;
-    text-align: left;
   }
 }
 
+@media #{$bootstrap-xs} {
+  .right-block {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
 @media #{$bootstrap-xs} {
   .footer-width {
     width: 76%;

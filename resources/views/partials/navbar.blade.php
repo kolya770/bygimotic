@@ -34,5 +34,6 @@
                 <li><a href="#" class="position-cn">Контакті</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    </div>
+    <img class="rainbow" src="img/rainbow.png"><!-- /.container-fluid -->
 </nav>

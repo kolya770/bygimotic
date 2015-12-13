@@ -34,9 +34,9 @@
                                     itecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
                                     sit aspernatur aut odit aut fugit,</p>
                             </div>
-                            <div class="col-xs-12">
+
                                 <button class="btn btn-default read-all-btn center-block">Читать все</button>
-                            </div>
+
 
                         </div>
                     </div>

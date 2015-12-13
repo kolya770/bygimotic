@@ -38,3 +38,9 @@ $bootstrap-xl: "(min-width:1400px)";
     margin-top: - ($height / 2);
   }
 }
+
+@mixin contact-write-btn ($width, $media){
+  position: absolute;
+  width: $width;
+  margin-left: - ($width/2);
+}

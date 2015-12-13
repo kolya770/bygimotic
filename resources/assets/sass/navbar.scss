@@ -19,6 +19,15 @@
       width: auto;
     }
   }
+
+  .rainbow {
+    left: 50%;
+    @include content-position(72%, -118px, $bootstrap-xs);
+    @include content-position(72%, -118px, $bootstrap-sm);
+    @include content-position(88%, -18.6vh, $bootstrap-lg);
+    @include content-position(1050px, -165px, $bootstrap-xl);
+  }
+
   .navbar-nav {
     .my-menu {
       box-shadow: 0 0 19px 0 rgba(46, 40, 38, 0.3);

@@ -22,12 +22,12 @@
     z-index: 1;
     width: 100%;
   }
-  .rainbow {
-    left: 50%;
-    @include content-position(72%, 11vh, $bootstrap-xs);
-    @include content-position(72%, 11vh, $bootstrap-sm);
-    @include content-position(1050px, 14vh, $bootstrap-xl);
-  }
+  //.rainbow {
+  //  left: 50%;
+  //  @include content-position(72%, 11vh, $bootstrap-xs);
+  //  @include content-position(72%, 11vh, $bootstrap-sm);
+  //  @include content-position(1050px, 14vh, $bootstrap-xl);
+  //}
   .first-cloud {
     position: absolute;
     top:22%;

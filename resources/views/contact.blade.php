@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 map">
-                        <button class="btn btn-default write-btn">Написать нам</button>
+                        <button class="btn btn-default write-btn center-block">Написать нам</button>
                         <img src="img/map.png">
                     </div>
 
