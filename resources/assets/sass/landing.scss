@@ -1,12 +1,14 @@
 .content {
 
   @media #{$bootstrap-xs} {
+    margin-top: -55vh;
     .content-width {
       width: 76%;
     }
   }
 
   @media #{$bootstrap-sm} {
+    margin-top: -90vh;
     .content-width {
       width: 76%;
       max-width: 1175px;
@@ -19,19 +21,18 @@
     }
   }
 
-  margin-top: -90vh;
   margin-bottom: 70px;
 
   .first-block {
-    background-color: $white;
+    background-color: $bg-text-color-1;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     z-index: 1;
 
     h1{
       font-family: $font-R-black;
-      color:  #9063a6;
-      font-size: 36px;
+      color:  $bg-text-color-2;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
@@ -40,8 +41,8 @@
 
     p {
       font-family: $font-R-regular;
-      color:  #4f5e69;
-      font-size: 16px;
+      color:  $text-color-1;
+      font-size: 1em;
       font-weight: 400;
       line-height: 24px;
       text-align: center;
@@ -50,13 +51,13 @@
     }
 
     .read-all-btn {
-      background-color:  #9063a6;
+      background-color: $bg-text-color-2;
       width: 170px;
       height: 40px;
       border-radius: 50px;
       font-family: $font-R-black;
-      color: $white;
-      font-size: 18.38px;
+      color: $bg-text-color-1;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;
@@ -65,12 +66,12 @@
     }
   }
   .second-block {
-    background-color:  #9063a6;
+    background-color:  $bg-text-color-2;
     z-index: 10;
     h2 {
       font-family: $font-R-black;
-      color:  $white;
-      font-size: 36px;
+      color:  $bg-text-color-1;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
@@ -78,9 +79,9 @@
     }
     p {
 
-      font-size: 16px;
+      font-size: 1em;
       font-family: $font-R-regular;
-      color: rgb(255, 255, 255);
+      color: $bg-text-color-1;
       line-height: 1.5;
       font-weight: 400;
 
@@ -106,13 +107,13 @@
     }
 
     .read-all-btn {
-      background-color:  #ffffff;
+      background-color: $bg-text-color-1;
       width: 170px;
       height: 40px;
       border-radius: 50px;
       font-family: $font-R-black;
-      color:  #9063a6;
-      font-size: 18.38px;
+      color:  $bg-text-color-2;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;
@@ -122,13 +123,13 @@
   }
 
   .third-block {
-    background-color: #ffffff;
+    background-color: $bg-text-color-1;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     h2 {
       font-family: $font-R-black;
-      color:  #9063a6;
-      font-size: 36px;
+      color:  $bg-text-color-2;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
@@ -136,8 +137,8 @@
     }
     p {
       font-family: $font-R-regular;
-      color:  #4f5e69;
-      font-size: 16px;
+      color:  $text-color-1;
+      font-size: 1em;
       font-weight: 400;
       line-height: 24px;
       text-align: center;
@@ -153,13 +154,13 @@
     }
 
     .read-all-btn {
-      background-color:  #9063a6;
+      background-color:  $bg-text-color-2;
       width: 170px;
       height: 40px;
       border-radius: 50px;
       font-family: $font-R-black;
-      color:  #ffffff;
-      font-size: 18.38px;
+      color:  $bg-text-color-1;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;

@@ -1,13 +1,13 @@
 .categories {
-  background-color: $white;
+  background-color: $bg-text-color-1;
   border-radius: 15px;
   z-index: 1;
   padding: 0;
 
   h2 {
     font-family: $font-R-black;
-    color:  #9063a6;
-    font-size: 36px;
+    color:  $bg-text-color-2;
+    font-size: 2.250em;
     font-weight: 900;
     line-height: 36px;
     text-align: center;
@@ -18,29 +18,33 @@
   .image-click {
     padding: 0;
     margin-bottom: 70px;
+
     .padding {
       padding: 0;
     }
+
     .background-1 {
       background-color: rgba(0, 0, 0, 0.9);
       img {
         opacity: 0.4;
       }
     }
+
     .background-2 {
       background-color: rgba(0, 0, 0, 0.9);
       img {
         opacity: 0.1;
       }
     }
+
     .centred {
       @include text-position(150px, 30px, $bootstrap-xs);
       @include text-position(150px, 30px, $bootstrap-sm);
 
       p {
         font-family: $font-R-black;
-        color:  #ffffff;
-        font-size: 17.94px;
+        color:  $bg-text-color-1;
+        font-size: 1.125em;
         font-weight: 900;
         line-height: 24.056px;
         text-align: center;
@@ -50,19 +54,20 @@
 
       span {
         font-family: $font-R-regular;
-        color: #ffffff;
-        font-size: 11.96px;
+        color: $bg-text-color-1;
+        font-size: 0.75em;
         font-weight: 400;
-        line-height: 24.105px;
+        line-height: 10px;
         transform: scaleY(1.0033);
       }
+
       .font-sz {
         font-size: 30px;
       }
 
       hr {
         border: none;
-        background-color:  #9063a6;
+        background-color: $bg-text-color-2;
         width: 70%;
         height: 2px;
       }
@@ -70,35 +75,37 @@
       .width {
         width: 40%;
         margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
 
     .stationery-block {
+
       text-align: center;
-      @include text-position(200px, 175px, $bootstrap-xs);
-      @include text-position(200px, 175px, $bootstrap-sm);
+      @include text-position(150px, 150px, $bootstrap-xs);
+      @include text-position(150px, 150px, $bootstrap-sm);
 
       .stationery-btn {
-        background-color:  #9063a6;
+        background-color:  $bg-text-color-2;
         width: 108px;
         height: 26px;
         border: none;
         border-radius: 50px;
         font-family: $font-R-black;
-        color:  #ffffff;
-        font-size: 11.68px;
+        color:  $bg-text-color-1;
+        font-size: 0.750em;
         font-weight: 900;
         line-height: 10px;
         text-align: center;
         transform: scaleY(1.0231);
         margin-top: 15px;
+        display: block;
       }
     }
 
     img {
       width: 100%;
     }
-
 
   }
 }

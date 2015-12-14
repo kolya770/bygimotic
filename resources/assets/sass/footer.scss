@@ -1,12 +1,12 @@
 footer {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-color:  #9063a6;
+  background-color:  $bg-text-color-2;
 
   p {
     font-family: $font-R-regular;
-    color:  #ffffff;
-    font-size: 16px;
+    color:  $bg-text-color-1;
+    font-size: 1em;
     line-height: 24px;
     font-weight: 300;
     @media #{$bootstrap-xs} {
@@ -24,8 +24,8 @@ footer {
   }
   span {
     font-family: $font-R-black;
-    color:  #ffffff;
-    font-size: 18px;
+    color:  $bg-text-color-1;
+    font-size: 1.125em;
     font-weight: 900;
     line-height: 24px;
   }

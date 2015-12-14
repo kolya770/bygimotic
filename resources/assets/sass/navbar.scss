@@ -1,6 +1,15 @@
 .full-navbar {
   text-align: center;
-  margin-top: 15vh;
+
+  @media #{$bootstrap-xs} {
+    position: fixed;
+    top:100px;
+    z-index: 100;
+
+  }
+  @media #{$bootstrap-sm} {
+
+  }
   .rainbow {
     left: 50%;
     max-width: 1175px;
@@ -19,49 +28,57 @@
     @media #{$bootstrap-xl} {
       width: 120vh;
     }
-    //@include content-position(72%, -118px, $bootstrap-xs);
-    //@include content-position(72%, -118px, $bootstrap-sm);
-    //@include content-position(88%, -18.6vh, $bootstrap-lg);
-    //@include content-position(1050px, -165px, $bootstrap-xl);
+
   }
 
   .navbar-bygimotic {
     border-radius: 10px;
     border: none;
-    background-color:  #ffffff;
-    //left: 50%;
+    background-color:  $bg-text-color-1;
     height: 60px;
     z-index: 2;
     width: 76%;
     max-width: 1175px;
-    //@include content-position(76%, 30vh, $bootstrap-xs);
-    //@include content-position(76%, 30vh, $bootstrap-sm);
-    //@include content-position(1175px, 30vh, $bootstrap-xl);
 
     .my-navbar {
 
       @media #{$bootstrap-xs} {
         width: auto;
+        .mobile-nav {
+          background-color: $bg-text-color-2;
+          margin-bottom: 14px;
+          margin-top: 14px;
+          .my-icon-bar {
+            background-color: $bg-text-color-1;
+          }
+        }
+        .mobile-menu {
+          background-color: gainsboro;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
       }
 
       @media #{$bootstrap-sm} {
         width: auto;
+
       }
     }
+
 
     .navbar-nav {
       .my-menu {
         box-shadow: 0 0 19px 0 rgba(46, 40, 38, 0.3);
         border-radius: 10px;
-        background-color:  #ffffff;
+        background-color:  $bg-text-color-1;
         width: 200px;
         height: 281px;
         border: none;
 
         a {
           font-family: $font-R-black;
-          color:  #9063a6;
-          font-size: 11px;
+          color:  $bg-text-color-2;
+          font-size: 0.688em;
           font-weight: 900;
           line-height: 20px;
           text-align: left;
@@ -87,8 +104,8 @@
         }
         font-family: $font-R-black;
         a {
-          color: #9063a6;
-          font-size: 13.5px;
+          color: $bg-text-color-2;
+          font-size: 0.844em;
           font-weight: 900;
           text-align: center;
           transform: scaleX(1.0086);

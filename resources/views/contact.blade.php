@@ -23,11 +23,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 map">
+                    <div class="col-sm-12 map-content">
                         <button class="btn btn-default write-btn center-block">Написать нам</button>
-                        <img src="img/map.png">
+                        {{--<div id="map_canvas"></div>--}}
+                        {{--<img src="img/map.png">--}}
+                        <div id="map" class="map"></div>
                     </div>
-
                 </div>
             </div>
         </div>

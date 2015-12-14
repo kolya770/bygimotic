@@ -1,13 +1,13 @@
 .categories-article {
-  background-color: $white;
+  background-color: $bg-text-color-1;
   border-radius: 15px;
   z-index: 1;
   padding: 0;
 
   h2 {
     font-family: $font-R-black;
-    color:  #9063a6;
-    font-size: 36px;
+    color:  $bg-text-color-2;
+    font-size: 2.250em;
     font-weight: 900;
     line-height: 36px;
     text-align: center;
@@ -27,8 +27,8 @@
 
     p {
       font-family: $font-R-regular;
-      color:  #4f5e69;
-      font-size: 16px;
+      color:  $text-color-1;
+      font-size: 1em;
       font-weight: 400;
       line-height: 30px;
       text-align: center;

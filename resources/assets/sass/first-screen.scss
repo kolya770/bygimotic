@@ -3,17 +3,25 @@
 
   .logo {
     left: 50%;
-    z-index: 3;
+
     @include content-position(110px, 11vh, $bootstrap-xs);
-    @include content-position(218px, 11vh, $bootstrap-sm);
+    @include content-position(190px, 13vh, $bootstrap-sm);
     @include content-position(270px, 10vh, $bootstrap-xl);
 
     @media #{$bootstrap-xs} {
+      z-index: 200;
       img {
         width: 100%;
       }
     }
+
     @media #{$bootstrap-sm} {
+      z-index: 3;
+      img {
+        width: 190px;
+      }
+    }
+    @media #{$bootstrap-xl} {
       img {
         width: 270px;
       }

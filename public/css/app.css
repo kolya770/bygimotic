@@ -14,8 +14,12 @@ body {
   background-color: #b6ccff; }
 
 .full-navbar {
-  text-align: center;
-  margin-top: 15vh; }
+  text-align: center; }
+  @media (max-width: 767px) {
+    .full-navbar {
+      position: fixed;
+      top: 100px;
+      z-index: 100; } }
   .full-navbar .rainbow {
     left: 50%;
     max-width: 1175px; }
@@ -44,7 +48,17 @@ body {
     max-width: 1175px; }
     @media (max-width: 767px) {
       .full-navbar .navbar-bygimotic .my-navbar {
-        width: auto; } }
+        width: auto; }
+        .full-navbar .navbar-bygimotic .my-navbar .mobile-nav {
+          background-color: #9063a6;
+          margin-bottom: 14px;
+          margin-top: 14px; }
+          .full-navbar .navbar-bygimotic .my-navbar .mobile-nav .my-icon-bar {
+            background-color: #ffffff; }
+        .full-navbar .navbar-bygimotic .my-navbar .mobile-menu {
+          background-color: gainsboro;
+          border-radius: 10px;
+          margin-top: 10px; } }
     @media (min-width: 768px) {
       .full-navbar .navbar-bygimotic .my-navbar {
         width: auto; } }
@@ -58,7 +72,7 @@ body {
       .full-navbar .navbar-bygimotic .navbar-nav .my-menu a {
         font-family: "Roboto-Black";
         color: #9063a6;
-        font-size: 11px;
+        font-size: 0.688em;
         font-weight: 900;
         line-height: 20px;
         text-align: left;
@@ -79,7 +93,7 @@ body {
           margin: 0 50px 0 50px; } }
       .full-navbar .navbar-bygimotic .navbar-nav li a {
         color: #9063a6;
-        font-size: 13.5px;
+        font-size: 0.844em;
         font-weight: 900;
         text-align: center;
         -webkit-transform: scaleX(1.0086);
@@ -94,8 +108,7 @@ body {
 #first-screen {
   height: 100vh; }
   #first-screen .logo {
-    left: 50%;
-    z-index: 3; }
+    left: 50%; }
     @media (max-width: 767px) {
       #first-screen .logo {
         position: absolute;
@@ -105,9 +118,9 @@ body {
     @media (min-width: 768px) {
       #first-screen .logo {
         position: absolute;
-        width: 218px;
-        top: 11vh;
-        margin-left: -109px; } }
+        width: 190px;
+        top: 13vh;
+        margin-left: -95px; } }
     @media (min-width: 1400px) {
       #first-screen .logo {
         position: absolute;
@@ -115,9 +128,16 @@ body {
         top: 10vh;
         margin-left: -135px; } }
     @media (max-width: 767px) {
-      #first-screen .logo img {
-        width: 100%; } }
+      #first-screen .logo {
+        z-index: 200; }
+        #first-screen .logo img {
+          width: 100%; } }
     @media (min-width: 768px) {
+      #first-screen .logo {
+        z-index: 3; }
+        #first-screen .logo img {
+          width: 190px; } }
+    @media (min-width: 1400px) {
       #first-screen .logo img {
         width: 270px; } }
   #first-screen .houses {
@@ -152,15 +172,18 @@ body {
     width: 6%; }
 
 .content {
-  margin-top: -90vh;
   margin-bottom: 70px; }
   @media (max-width: 767px) {
-    .content .content-width {
-      width: 76%; } }
+    .content {
+      margin-top: -55vh; }
+      .content .content-width {
+        width: 76%; } }
   @media (min-width: 768px) {
-    .content .content-width {
-      width: 76%;
-      max-width: 1175px; } }
+    .content {
+      margin-top: -90vh; }
+      .content .content-width {
+        width: 76%;
+        max-width: 1175px; } }
   @media (min-width: 1400px) {
     .content .content-width {
       max-width: 1175px; } }
@@ -172,7 +195,7 @@ body {
     .content .first-block h1 {
       font-family: "Roboto-Black";
       color: #9063a6;
-      font-size: 36px;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
@@ -180,7 +203,7 @@ body {
     .content .first-block p {
       font-family: "Roboto-Regular";
       color: #4f5e69;
-      font-size: 16px;
+      font-size: 1em;
       font-weight: 400;
       line-height: 24px;
       text-align: center;
@@ -193,7 +216,7 @@ body {
       border-radius: 50px;
       font-family: "Roboto-Black";
       color: #ffffff;
-      font-size: 18.38px;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;
@@ -206,15 +229,15 @@ body {
     .content .second-block h2 {
       font-family: "Roboto-Black";
       color: #ffffff;
-      font-size: 36px;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
       margin-top: 70px; }
     .content .second-block p {
-      font-size: 16px;
+      font-size: 1em;
       font-family: "Roboto-Regular";
-      color: white;
+      color: #ffffff;
       line-height: 1.5;
       font-weight: 400; }
       @media (max-width: 767px) {
@@ -240,7 +263,7 @@ body {
       border-radius: 50px;
       font-family: "Roboto-Black";
       color: #9063a6;
-      font-size: 18.38px;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;
@@ -254,7 +277,7 @@ body {
     .content .third-block h2 {
       font-family: "Roboto-Black";
       color: #9063a6;
-      font-size: 36px;
+      font-size: 2.250em;
       font-weight: 900;
       line-height: 36px;
       text-align: center;
@@ -262,7 +285,7 @@ body {
     .content .third-block p {
       font-family: "Roboto-Regular";
       color: #4f5e69;
-      font-size: 16px;
+      font-size: 1em;
       font-weight: 400;
       line-height: 24px;
       text-align: center;
@@ -279,7 +302,7 @@ body {
       border-radius: 50px;
       font-family: "Roboto-Black";
       color: #ffffff;
-      font-size: 18.38px;
+      font-size: 1.150em;
       font-weight: 900;
       line-height: 20px;
       text-align: center;
@@ -294,7 +317,7 @@ footer {
   footer p {
     font-family: "Roboto-Regular";
     color: #ffffff;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     font-weight: 300; }
     @media (max-width: 767px) {
@@ -310,7 +333,7 @@ footer {
   footer span {
     font-family: "Roboto-Black";
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 900;
     line-height: 24px; }
 
@@ -340,7 +363,7 @@ footer {
   .contact h2 {
     font-family: "Roboto-Black";
     color: #9063a6;
-    font-size: 36px;
+    font-size: 2.250em;
     font-weight: 900;
     line-height: 36px;
     text-align: center;
@@ -349,7 +372,7 @@ footer {
   .contact .text {
     font-family: "Roboto-Regular";
     color: #4f5e69;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     line-height: 30px;
     margin-bottom: 90px; }
@@ -362,7 +385,7 @@ footer {
   .contact .info {
     font-family: "Roboto-Black";
     color: #4f5e69;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 900;
     line-height: 24px;
     margin-bottom: 90px; }
@@ -382,7 +405,7 @@ footer {
     margin-top: -20px;
     font-family: "Roboto-Black";
     color: #ffffff;
-    font-size: 18.38px;
+    font-size: 1.150em;
     font-weight: 900;
     line-height: 15px;
     text-align: center;
@@ -391,10 +414,13 @@ footer {
     position: absolute;
     width: 175px;
     margin-left: -87.5px; }
-  .contact .map {
+  .contact .map-content {
     padding: 0;
     margin-bottom: 90px; }
-    .contact .map img {
+    .contact .map-content .map {
+      width: 100%;
+      height: 60vh; }
+    .contact .map-content img {
       width: 100%; }
 
 .categories-article {
@@ -405,7 +431,7 @@ footer {
   .categories-article h2 {
     font-family: "Roboto-Black";
     color: #9063a6;
-    font-size: 36px;
+    font-size: 2.250em;
     font-weight: 900;
     line-height: 36px;
     text-align: center;
@@ -419,7 +445,7 @@ footer {
   .categories-article .text-block p {
     font-family: "Roboto-Regular";
     color: #4f5e69;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     line-height: 30px;
     text-align: center; }
@@ -434,7 +460,7 @@ footer {
   .categories h2 {
     font-family: "Roboto-Black";
     color: #9063a6;
-    font-size: 36px;
+    font-size: 2.250em;
     font-weight: 900;
     line-height: 36px;
     text-align: center;
@@ -474,7 +500,7 @@ footer {
     .categories .image-click .centred p {
       font-family: "Roboto-Black";
       color: #ffffff;
-      font-size: 17.94px;
+      font-size: 1.125em;
       font-weight: 900;
       line-height: 24.056px;
       text-align: center;
@@ -484,9 +510,9 @@ footer {
     .categories .image-click .centred span {
       font-family: "Roboto-Regular";
       color: #ffffff;
-      font-size: 11.96px;
+      font-size: 0.75em;
       font-weight: 400;
-      line-height: 24.105px;
+      line-height: 10px;
       -webkit-transform: scaleY(1.0033);
       transform: scaleY(1.0033); }
     .categories .image-click .centred .font-sz {
@@ -498,7 +524,8 @@ footer {
       height: 2px; }
     .categories .image-click .centred .width {
       width: 40%;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 10px; }
     .categories .image-click .stationery-block {
       text-align: center; }
       @media (max-width: 767px) {
@@ -506,19 +533,19 @@ footer {
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 200px;
-          height: 175px;
-          margin-left: -100px;
-          margin-top: -87.5px; } }
+          width: 150px;
+          height: 150px;
+          margin-left: -75px;
+          margin-top: -75px; } }
       @media (min-width: 768px) {
         .categories .image-click .stationery-block {
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 200px;
-          height: 175px;
-          margin-left: -100px;
-          margin-top: -87.5px; } }
+          width: 150px;
+          height: 150px;
+          margin-left: -75px;
+          margin-top: -75px; } }
       .categories .image-click .stationery-block .stationery-btn {
         background-color: #9063a6;
         width: 108px;
@@ -527,13 +554,14 @@ footer {
         border-radius: 50px;
         font-family: "Roboto-Black";
         color: #ffffff;
-        font-size: 11.68px;
+        font-size: 0.750em;
         font-weight: 900;
         line-height: 10px;
         text-align: center;
         -webkit-transform: scaleY(1.0231);
         transform: scaleY(1.0231);
-        margin-top: 15px; }
+        margin-top: 15px;
+        display: block; }
     .categories .image-click img {
       width: 100%; }
 

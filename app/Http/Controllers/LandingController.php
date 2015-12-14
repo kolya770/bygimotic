@@ -49,5 +49,4 @@ class LandingController extends Controller
         return view('categories');
     }
 
-
 }

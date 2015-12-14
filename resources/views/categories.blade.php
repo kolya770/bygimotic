@@ -38,7 +38,7 @@
                                 <p>Канцтовары</p>
                                 <hr class="center-block width">
                                 <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</span>
-                                <button class="btn btn-danger stationery-btn">Читать все</button>
+                                <button class="btn btn-danger stationery-btn center-block">Читать все</button>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-3 padding background-1">
