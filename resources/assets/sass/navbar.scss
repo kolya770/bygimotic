@@ -1,15 +1,14 @@
 .full-navbar {
   text-align: center;
-
   @media #{$bootstrap-xs} {
     position: fixed;
-    top:100px;
+    top: 13vh;
     z-index: 100;
-
   }
   @media #{$bootstrap-sm} {
-
+    margin-top: 12vh;
   }
+
   .rainbow {
     left: 50%;
     max-width: 1175px;

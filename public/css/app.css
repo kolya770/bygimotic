@@ -18,8 +18,11 @@ body {
   @media (max-width: 767px) {
     .full-navbar {
       position: fixed;
-      top: 100px;
+      top: 13vh;
       z-index: 100; } }
+  @media (min-width: 768px) {
+    .full-navbar {
+      margin-top: 12vh; } }
   .full-navbar .rainbow {
     left: 50%;
     max-width: 1175px; }
@@ -148,28 +151,33 @@ body {
     width: 100%; }
   #first-screen .first-cloud {
     position: absolute;
-    top: 22%;
-    left: 2%;
-    width: 6%; }
+    top: 12%;
+    left: -5%;
+    width: 6%;
+    opacity: 0; }
   #first-screen .second-cloud {
     position: absolute;
-    top: 11%;
-    left: 25%;
-    width: 6%; }
+    top: 6%;
+    left: 15%;
+    width: 6%;
+    opacity: 0; }
   #first-screen .third-cloud {
     position: absolute;
-    left: 53%;
-    top: 7%; }
+    left: 48%;
+    top: 2%;
+    opacity: 0; }
   #first-screen .fourth-cloud {
     position: absolute;
-    right: 18%;
-    top: 11%;
-    width: 7.5%; }
+    right: 10%;
+    top: 6%;
+    width: 7.5%;
+    opacity: 0; }
   #first-screen .fifth-cloud {
     position: absolute;
-    right: 3%;
-    top: 22%;
-    width: 6%; }
+    right: -2%;
+    top: 17%;
+    width: 6%;
+    opacity: 0; }
 
 .content {
   margin-bottom: 70px; }
