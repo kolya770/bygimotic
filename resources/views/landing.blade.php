@@ -27,6 +27,10 @@
                             <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 
                             <div class="col-xs-12 col-sm-5">
+                                <
+                                {{--<video class="video center-block" src="https://www.youtube.com/embed/DzRTKNM0meU"  controls autobuffer>--}}
+                                    {{--<p> Try this page in Safari  4! Or you can <a  href="https://www.youtube.com/embed/DzRTKNM0meU">download the  video</a> instead.</p>--}}
+                                {{--</video>--}}
                                 <iframe  class="video center-block" src="https://www.youtube.com/embed/aQ-2JkcdbQA" frameborder="0" allowfullscreen></iframe>
                             </div>
                             <div class="col-xs-12 col-sm-6">

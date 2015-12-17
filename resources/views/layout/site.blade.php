@@ -16,9 +16,37 @@ $detect = new Mobile_Detect();
 
     {!! Html::style('css/app.css') !!}
 
-
 </head>
 <body>
+<div id="page-preloader">
+    <div class="cssload-container">
+        <div class="cssload-circle-1">
+            <div class="cssload-circle-2">
+                <div class="cssload-circle-3">
+                    <div class="cssload-circle-4">
+                        <div class="cssload-circle-5">
+                            <div class="cssload-circle-6">
+                                <div class="cssload-circle-7">
+                                    <div class="cssload-circle-8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cssload-container1">
+            <div class="cssload-l">L</div>
+            <div class="cssload-circle"></div>
+            <div class="cssload-square"></div>
+            <div class="cssload-triangle"></div>
+            <div class="cssload-i">I</div>
+            <div class="cssload-n">N</div>
+            <div class="cssload-g">G</div>
+        </div>
+    </div>
+</div>
 
 @include('partials.navbar')
 @include('partials.first-screen')

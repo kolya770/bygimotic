@@ -36,34 +36,34 @@
     width: 100%;
   }
   .first-cloud {
-    position: absolute;
+    position: fixed;
     top:12%;
     left:-5%;
     width: 6%;
     opacity: 0;
   }
   .second-cloud {
-    position: absolute;
+    position: fixed;
     top: 6%;
     left: 15%;
     width: 6%;
     opacity: 0;
   }
   .third-cloud {
-    position: absolute;
+    position: fixed;
     left: 48%;
     top: 2%;
     opacity: 0;
   }
   .fourth-cloud {
-    position: absolute;
+    position: fixed;
     right: 10%;
     top: 6%;
     width: 7.5%;
     opacity: 0;
   }
   .fifth-cloud {
-    position: absolute;
+    position: fixed;
     right: -2%;
     top:17%;
     width: 6%;

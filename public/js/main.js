@@ -1,3 +1,10 @@
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.cssload-container');
+    $spinner.fadeOut();
+    $preloader.delay(0).fadeOut('fast');
+});
+
 $(document).ready(function(){
     $('#logo').animate({
         opacity: 1

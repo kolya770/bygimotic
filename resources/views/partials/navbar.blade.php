@@ -1,5 +1,5 @@
 <div id="top_nav" class="full-navbar">
-    <img id="rain" class="rainbow" src="img/rainbow.png" style="opacity: 0; margin-top: -40px"><!-- /.container-fluid -->
+    <img id="rain" class="rainbow" src="img/rainbow.png" style="opacity: 0;"><!-- /.container-fluid -->
     <nav id="nav1" class="navbar navbar-bygimotic center-block">
         <div class="container my-navbar">
             <!-- Brand and toggle get grouped for better mobile display -->
