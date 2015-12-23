@@ -27,7 +27,6 @@
                             <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 
                             <div class="col-xs-12 col-sm-5">
-                                <
                                 {{--<video class="video center-block" src="https://www.youtube.com/embed/DzRTKNM0meU"  controls autobuffer>--}}
                                     {{--<p> Try this page in Safari  4! Or you can <a  href="https://www.youtube.com/embed/DzRTKNM0meU">download the  video</a> instead.</p>--}}
                                 {{--</video>--}}
@@ -38,10 +37,9 @@
                                     itecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
                                     sit aspernatur aut odit aut fugit,</p>
                             </div>
-
+                            <div class="col-xs-12">
                                 <button class="btn btn-default read-all-btn center-block">Читать все</button>
-
-
+                            </div>
                         </div>
                     </div>
 

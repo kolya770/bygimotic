@@ -14,9 +14,9 @@ $(document).ready(function(){
         margin: 0
     }, 4000);
 
-    setTimeout(animateСlouds1, 2000);
-    setTimeout(animateСlouds2, 2000);
-    setTimeout(animateClouds3, 2000);
+    //setTimeout(animateСlouds1, 2000);
+    //setTimeout(animateСlouds2, 2000);
+    //setTimeout(animateClouds3, 2000);
 
 });
 

@@ -24,9 +24,9 @@
                         </div>
                     </div>
                     <div class="col-sm-12 map-content">
-                        <button class="btn btn-default write-btn center-block">Написать нам</button>
-                        {{--<div id="map_canvas"></div>--}}
-                        {{--<img src="img/map.png">--}}
+                        <a href="" data-toggle="modal" data-target="#contactUs">
+                            <button class="btn btn-default write-btn center-block">Написать нам</button>
+                        </a>
                         <div id="map" class="map"></div>
                     </div>
                 </div>

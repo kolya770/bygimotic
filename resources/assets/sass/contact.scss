@@ -64,6 +64,11 @@
     line-height: 15px;
     text-align: center;
     transform: scaleX(1.0001);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
 
     @include contact-write-btn(175px, $bootstrap-sm);
   }

@@ -1,0 +1,354 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+#page-preloader {
+
+  .cssload-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(182, 204, 255);
+    z-index: 100500;
+    .cssload-container1 * {
+      color: rgb(0,0,0);
+      font-size: 33px;
+      font-weight: 700;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .cssload-container1 {
+      position: fixed;
+      width: 117px;
+      height: 49px;
+      left: 50%;
+      top:70%;
+      transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+    }
+    .cssload-container1 > div {
+      position: absolute;
+      transform-origin: center;
+      -o-transform-origin: center;
+      -ms-transform-origin: center;
+      -webkit-transform-origin: center;
+      -moz-transform-origin: center;
+    }
+    .cssload-l {
+      left: 8px;
+    }
+    .cssload-i {
+      left: 58px;
+    }
+    .cssload-n {
+      left: 70px;
+    }
+    .cssload-g {
+      left: 97px;
+    }
+    .cssload-square,
+    .cssload-circle,
+    .cssload-triangle {
+      left: 29px;
+    }
+    .cssload-square {
+      background: rgb(117,179,209);
+      width: 23px;
+      height: 23px;
+      left: 31px;
+      top: 12px;
+      transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -o-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -ms-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -webkit-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -moz-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      animation-delay: 2.3s;
+      -o-animation-delay: 2.3s;
+      -ms-animation-delay: 2.3s;
+      -webkit-animation-delay: 2.3s;
+      -moz-animation-delay: 2.3s;
+    }
+    .cssload-circle {
+      background: rgb(129,212,125);
+      width: 26px;
+      height: 26px;
+      top: 10px;
+      left: 29px;
+      border-radius: 50%;
+      animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -o-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -ms-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -webkit-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -moz-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      animation-delay: 0s;
+      -o-animation-delay: 0s;
+      -ms-animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      -moz-animation-delay: 0s;
+    }
+    .cssload-triangle {
+      width: 0;
+      height: 0;
+      left: 29px;
+      top: 11px;
+      border-style: solid;
+      border-width: 0 14.5px 24.1px 14.5px;
+      border-color: transparent transparent rgb(210,121,140) transparent;
+      transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -o-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -ms-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -webkit-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      -moz-animation: cssload-shrinkgrow 3.45s ease-in-out infinite;
+      animation-delay: 1.15s;
+      -o-animation-delay: 1.15s;
+      -ms-animation-delay: 1.15s;
+      -webkit-animation-delay: 1.15s;
+      -moz-animation-delay: 1.15s;
+    }
+
+
+    @keyframes cssload-shrinkgrow {
+      0% {
+        transform: scale(0);
+      }
+      12.5% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1);
+      }
+      33% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @-o-keyframes cssload-shrinkgrow {
+      0% {
+        -o-transform: scale(0);
+      }
+      12.5% {
+        -o-transform: scale(1);
+      }
+      25% {
+        -o-transform: scale(1);
+      }
+      33% {
+        -o-transform: scale(0);
+      }
+      100% {
+        -o-transform: scale(0);
+      }
+    }
+
+    @-ms-keyframes cssload-shrinkgrow {
+      0% {
+        -ms-transform: scale(0);
+      }
+      12.5% {
+        -ms-transform: scale(1);
+      }
+      25% {
+        -ms-transform: scale(1);
+      }
+      33% {
+        -ms-transform: scale(0);
+      }
+      100% {
+        -ms-transform: scale(0);
+      }
+    }
+
+    @-webkit-keyframes cssload-shrinkgrow {
+      0% {
+        -webkit-transform: scale(0);
+      }
+      12.5% {
+        -webkit-transform: scale(1);
+      }
+      25% {
+        -webkit-transform: scale(1);
+      }
+      33% {
+        -webkit-transform: scale(0);
+      }
+      100% {
+        -webkit-transform: scale(0);
+      }
+    }
+
+    @-moz-keyframes cssload-shrinkgrow {
+      0% {
+        -moz-transform: scale(0);
+      }
+      12.5% {
+        -moz-transform: scale(1);
+      }
+      25% {
+        -moz-transform: scale(1);
+      }
+      33% {
+        -moz-transform: scale(0);
+      }
+      100% {
+        -moz-transform: scale(0);
+      }
+    }
+  }
+
+
+
+  .cssload-circle-1 {
+    height: 117px;
+    width: 117px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin-left: -54px;
+    margin-top: -54px;
+    background: rgb(97,46,141);
+  }
+
+  .cssload-circle-2 {
+    height: 97px;
+    width: 97px;
+    background: rgb(194,34,134);
+  }
+
+  .cssload-circle-3 {
+    height: 78px;
+    width: 78px;
+    background: rgb(234,34,94);
+  }
+
+  .cssload-circle-4 {
+    height: 58px;
+    width: 58px;
+    background: rgb(237,91,53);
+  }
+
+  .cssload-circle-5 {
+    height: 39px;
+    width: 39px;
+    background: rgb(245,181,46);
+  }
+
+  .cssload-circle-6 {
+    height: 19px;
+    width: 19px;
+    background: rgb(129,197,64);
+  }
+
+  .cssload-circle-7 {
+    height: 10px;
+    width: 10px;
+    background: rgb(0,163,150);
+  }
+
+  .cssload-circle-8 {
+    height: 5px;
+    width: 5px;
+    background: rgb(22,116,188);
+  }
+
+  .cssload-circle-1,
+  .cssload-circle-2,
+  .cssload-circle-3,
+  .cssload-circle-4,
+  .cssload-circle-5,
+  .cssload-circle-6,
+  .cssload-circle-7,
+  .cssload-circle-8 {
+    border-bottom: none;
+    border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    -o-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    -ms-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    animation-name: cssload-spin;
+    -o-animation-name: cssload-spin;
+    -ms-animation-name: cssload-spin;
+    -webkit-animation-name: cssload-spin;
+    -moz-animation-name: cssload-spin;
+    animation-duration: 4600ms;
+    -o-animation-duration: 4600ms;
+    -ms-animation-duration: 4600ms;
+    -webkit-animation-duration: 4600ms;
+    -moz-animation-duration: 4600ms;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+  }
+
+
+
+  @keyframes cssload-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes cssload-spin {
+    from {
+      -o-transform: rotate(0deg);
+    }
+    to {
+      -o-transform: rotate(360deg);
+    }
+  }
+
+  @-ms-keyframes cssload-spin {
+    from {
+      -ms-transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes cssload-spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes cssload-spin {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+}

@@ -1,7 +1,21 @@
-footer {
+.footer-width {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color:  $bg-text-color-2;
+
+
+  @media #{$bootstrap-xs} {
+    width: 75%;
+  }
+
+  @media #{$bootstrap-sm} {
+    width: 75%;
+
+    .main-block {
+      margin-bottom: 10px;
+    }
+  }
+
 
   p {
     font-family: $font-R-regular;
@@ -15,42 +29,69 @@ footer {
     }
     @media #{$bootstrap-sm} {
       text-align: left;
-      margin: 40px 0 40px 40px;
+      margin: 40px 0 40px 0;
     }
 
   }
+
   .right-ft {
-    margin: 30px 0 10px 0;
+    margin: 40px 0 10px 0;
   }
+
   span {
     font-family: $font-R-black;
     color:  $bg-text-color-1;
     font-size: 1.125em;
     font-weight: 900;
     line-height: 24px;
+    @media #{$bootstrap-xs} {
+      text-align: center;
+    }
   }
-}
 
-@media #{$bootstrap-xs} {
+  .left-block {
+
+    @media #{$bootstrap-xs} {
+      display: block;
+      float: left;
+      width: 100%;
+
+    }
+
+    @media #{$bootstrap-sm} {
+      display: inline-block;
+      float: left;
+      margin-left: 5%;
+    }
+  }
   .right-block {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-}
-@media #{$bootstrap-xs} {
-  .footer-width {
-    width: 76%;
+
+    @media #{$bootstrap-xs} {
+      display: block;
+      float: left;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+
+    @media #{$bootstrap-sm} {
+      display: inline-block;
+      float: right;
+      margin-right: 5%;
+    }
   }
 }
 
-@media #{$bootstrap-sm} {
-  .footer-width {
-    width: 76%;
-    max-width: 1175px;
-  }
-}
-@media #{$bootstrap-xl} {
-  .footer-width {
-    width: 1175px;
-  }
-}
+//@media #{$bootstrap-xs} {
+//  .right-block {
+//    text-align: center;
+//    margin-bottom: 40px;
+//  }
+//
+//}
+
+
+
+
+

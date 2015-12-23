@@ -18,6 +18,7 @@ $detect = new Mobile_Detect();
 
 </head>
 <body>
+
 <div id="page-preloader">
     <div class="cssload-container">
         <div class="cssload-circle-1">
@@ -48,6 +49,44 @@ $detect = new Mobile_Detect();
     </div>
 </div>
 
+<div class="modal fade contact popup-wrapper" id="contactUs"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a href="" class="close-btn"><img src="img/close.png"></a>
+                <h5>Напишите нам</h5>
+                <p>Что бы заказать обратный звонок введите свое имя и номер телефона</p>
+                <form id="contForm" method="post" action="mail.php" name="contact">
+                    <label>
+                        <input type="text" name="name" required="required" placeholder="Имя" id="name" >
+                    </label>
+                    <label>
+                        <input type="tel" name="tel" required="required" placeholder="Номер телефона" id="tel">
+                    </label>
+                    <label>
+                        <textarea class="animated" name="message" placeholder="Ваше сообщение"></textarea>
+                    </label>
+                    <button type="submit">Отправить</button>
+                </form>
+                <!-- <div class="text-center"><span>Fields marked with* are mandatory</span></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="thanks-message">
+                    <p class="thx">Спасибо!<br/>Мы вам перезвоним!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @include('partials.navbar')
 @include('partials.first-screen')
 @yield('content')
@@ -56,6 +95,7 @@ $detect = new Mobile_Detect();
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/form.js"></script>
 <?php if ( $detect->isMobile() ): ?>
 <script src="js/mobile.js"></script>
 <?php endif ?>
