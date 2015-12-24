@@ -15,3 +15,17 @@ Route::get('/', 'LandingController@index');
 Route::get('/contacts', 'LandingController@contacts');
 Route::get('/categories-article', 'LandingController@categoriesArticle');
 Route::get('/categories', 'LandingController@categories');
+
+Route::get('admin/index', ['middleware' => 'auth', function () {
+    return view('admin.index');
+}]);
+
+// Authentication
+Route::get('admin/login', 'Auth\AuthController@getLogin');
+Route::post('admin/login', 'Auth\AuthController@postLogin');
+Route::get('admin/logout', 'Auth\AuthController@getLogout');
+
+Route::get('admin/register', 'Auth\AuthController@getRegister');
+Route::post('admin/register', 'Auth\AuthController@postRegister');
+
+Route::resource('admin/footer', 'FooterController');

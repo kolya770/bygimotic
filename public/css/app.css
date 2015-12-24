@@ -14,6 +14,23 @@
 body {
   background-color: #b6ccff; }
 
+.ibox {
+  margin-top: 5%; }
+  .ibox .info td {
+    vertical-align: middle; }
+  .ibox .section-create {
+    width: 180px; }
+  .ibox .section-edit {
+    width: 50px; }
+  .ibox .section-delete {
+    width: 66px; }
+  .ibox .dis-none {
+    display: none; }
+  .ibox .style-editor {
+    min-height: 300px;
+    border: 1px solid  #d9d9d9;
+    font-size: 18px; }
+
 #page-preloader .cssload-container {
   position: fixed;
   left: 0;
@@ -746,7 +763,8 @@ body {
     .footer-width .left-block {
       display: inline-block;
       float: left;
-      margin-left: 5%; } }
+      margin-left: 5%;
+      max-width: 300px; } }
   @media (max-width: 767px) {
     .footer-width .right-block {
       display: block;

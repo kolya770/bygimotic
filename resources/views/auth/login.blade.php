@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KievDev | Login</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">KD</h1>
+        </div>
+
+        <h3>Welcome, Me</h3>
+
+        <form class="m-t" role="form" method="POST" action="/admin/login" >
+            {!! csrf_field() !!}
+
+            <div class="form-group">
+                <input type="text" name="username" value="{{ old('username') }}" class="form-control" placeholder="Email" required="">
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+            </div>
+
+            <div class="test">
+                <label> <input type="checkbox" name="remember" class="i-checks"> Remember me </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+        </form>
+
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <p class="m-t"> <small>Created by Illuminum </small> </p>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+
+</body>
+
+</html>
