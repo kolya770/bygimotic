@@ -14,6 +14,11 @@ $detect = new Mobile_Detect();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.7.0/summernote.css" rel="stylesheet">
+
     {!! Html::style('css/app.css') !!}
 
 </head>
@@ -21,30 +26,28 @@ $detect = new Mobile_Detect();
 
 <div id="page-preloader">
     <div class="cssload-container">
-        <div class="cssload-circle-1">
-            <div class="cssload-circle-2">
-                <div class="cssload-circle-3">
-                    <div class="cssload-circle-4">
-                        <div class="cssload-circle-5">
-                            <div class="cssload-circle-6">
-                                <div class="cssload-circle-7">
-                                    <div class="cssload-circle-8">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="cssload-loader-inner">
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
             </div>
-        </div>
-        <div class="cssload-container1">
-            <div class="cssload-l">L</div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-square"></div>
-            <div class="cssload-triangle"></div>
-            <div class="cssload-i">I</div>
-            <div class="cssload-n">N</div>
-            <div class="cssload-g">G</div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
+            <div class="cssload-cssload-loader-line-wrap-wrap">
+                <div class="cssload-loader-line-wrap"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -86,9 +89,8 @@ $detect = new Mobile_Detect();
     </div>
 </div>
 
-
-@include('partials.navbar')
 @include('partials.first-screen')
+@include('partials.navbar')
 @yield('content')
 @include('partials.footer')
 
@@ -96,6 +98,32 @@ $detect = new Mobile_Detect();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/form.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.7.0/summernote.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true,
+            airMode: true,
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
+
+    });
+</script>
+
 <?php if ( $detect->isMobile() ): ?>
 <script src="js/mobile.js"></script>
 <?php endif ?>

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Footer;
+use App\Models\Blog;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -15,7 +18,9 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('landing');
+        $footer = Footer::find(1);
+        $blogs = Blog::all();
+        return view('landing', compact('footer', 'blogs'));
     }
 
     /**
@@ -25,7 +30,10 @@ class LandingController extends Controller
      */
     public function contacts()
     {
-        return view('contact');
+        $footer = Footer::find(1);
+        $contact = Contact::find(1);
+
+        return view('contact', compact('footer', 'contact'));
     }
 
     /**

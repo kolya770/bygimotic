@@ -1,45 +1,10 @@
 #first-screen {
-  height: 100vh;
 
-  .logo {
-    left: 50%;
-    opacity: 0;
-
-    @media #{$bootstrap-xs} {
-      position: fixed;
-      width: 110px;
-      top: 11vh;
-      margin-left: - (110px / 2);
-    }
-
-    @include content-position(190px, 13vh, $bootstrap-sm);
-    @include content-position(270px, 10vh, $bootstrap-xl);
-
-    @media #{$bootstrap-xs} {
-      z-index: 200;
-      img {
-        width: 100%;
-      }
-    }
-
-    @media #{$bootstrap-sm} {
-      z-index: 3;
-      img {
-        width: 190px;
-      }
-    }
-    @media #{$bootstrap-xl} {
-      img {
-        width: 270px;
-      }
-    }
-
-  }
-
-  .logo.affix {
-    top:0;
-    opacity: 0!important;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   .houses {
     position: absolute;
@@ -47,6 +12,9 @@
     bottom: 0;
     z-index: 1;
     width: 100%;
+    @media #{$bootstrap-xs} {
+      display: none;
+    }
   }
   .first-cloud {
     position: absolute;

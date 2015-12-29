@@ -1,8 +1,12 @@
 .ibox{
   margin-top: 5%;
-  .info {
-    td {
-      vertical-align: middle;
+  .table {
+    .info {
+
+      td {
+        vertical-align: middle;
+        background-color: white;
+      }
     }
   }
   .section-create {

@@ -9,14 +9,15 @@ $(document).ready(function() {
     $('#rain').affix({
         offset: {
             top: 100
-        }
+        },
+        display: 'none'
     });
 
     $('#logo').affix({
         offset: {
             top: 100
-
-        }
+        },
+        display: 'none'
     });
 
 

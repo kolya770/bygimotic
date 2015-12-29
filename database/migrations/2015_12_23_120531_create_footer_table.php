@@ -13,12 +13,11 @@ class CreateFooterTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('copyrighting1');
-            $table->text('copyrighting2');
-            $table->text('tel1');
-            $table->text('tel2');
+            $table->text('copyright');
+            $table->text('number_1');
+            $table->text('number_2');
             $table->timestamps();
-    });
+        });
     }
 
     /**

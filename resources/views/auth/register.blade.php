@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>KievDev | Register</title>
+    <title>Bygimotic | Register</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -32,7 +32,7 @@
             {!! csrf_field() !!}
 
             <div class="form-group">
-                <input type="text" name="username" value="{{ old('username') }}" class="form-control" placeholder="Email" required="">
+                <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email" required="">
             </div>
 
             <div class="form-group">

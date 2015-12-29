@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSPINIA | Dashboard v.4</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Bygimotic | Dashboard</title>
     {!! Html::style('admin/css/bootstrap.css') !!}
     {!! Html::style('admin/font-awesome/css/font-awesome.css') !!}
             <!-- Morris -->
@@ -18,30 +19,10 @@
 </head>
 
 <body>
-@include('admin.sidebar')
+@include('layouts.sidebar')
 <div id="page-wrapper" class="gray-bg">
-    <div class="row border-bottom">
-        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
-                    <div class="form-group">
-                        <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-                    </div>
-                </form>
-            </div>
-            <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <a href="login.html">
-                        <i class="fa fa-sign-out"></i> Log out
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
+    @include('layouts.sidebar-top')
     @yield('content')
-
 </div>
 <!-- Mainly scripts -->
 {!! HTML::script('admin/js/jquery-2.1.1.js') !!}
@@ -58,18 +39,7 @@
 
         <!-- SUMMERNOTE -->
 {!! HTML::script('admin/js/plugins/summernote/summernote.min.js') !!}
-
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            onkeyup: function(e) {
-                $('#lawsContent').val($('#summernote').code());
-            }
-        });
-        $('.note-editable').addClass('style-editor');
-    });
-
-</script>
+{!! HTML::script('admin/js/admin.js') !!}
 
 </body>
 </html>

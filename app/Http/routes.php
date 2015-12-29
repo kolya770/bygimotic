@@ -28,4 +28,15 @@ Route::get('admin/logout', 'Auth\AuthController@getLogout');
 Route::get('admin/register', 'Auth\AuthController@getRegister');
 Route::post('admin/register', 'Auth\AuthController@postRegister');
 
-Route::resource('admin/footer', 'FooterController');
+Route::resource('admin/footer', 'Admin\FooterController');
+Route::resource('admin/blog', 'Admin\BlogController');
+Route::resource('admin/contact', 'Admin\ContactController');
+
+Route::post('admin/blog/ajaximage', function(){
+
+    $file = Request::file('file');
+    $destinationPath = public_path().'/uploads/';
+    $filename = $file->getClientOriginalName();
+    $file->move($destinationPath, $filename);
+    echo url().'/uploads/'.$filename;
+});
