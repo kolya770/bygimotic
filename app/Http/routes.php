@@ -16,11 +16,7 @@ Route::get('/contacts', 'LandingController@contacts');
 Route::get('/categories-article', 'LandingController@categoriesArticle');
 Route::get('/categories', 'LandingController@categories');
 
-Route::get('admin/index', ['middleware' => 'auth', function () {
-    return view('admin.index');
-}]);
-
-// Authentication
+// Authentication Admin
 Route::get('admin/login', 'Auth\AuthController@getLogin');
 Route::post('admin/login', 'Auth\AuthController@postLogin');
 Route::get('admin/logout', 'Auth\AuthController@getLogout');
@@ -28,15 +24,12 @@ Route::get('admin/logout', 'Auth\AuthController@getLogout');
 Route::get('admin/register', 'Auth\AuthController@getRegister');
 Route::post('admin/register', 'Auth\AuthController@postRegister');
 
+Route::resource('admin/dashboard', 'Admin\DashboardController');
+
 Route::resource('admin/footer', 'Admin\FooterController');
 Route::resource('admin/blog', 'Admin\BlogController');
 Route::resource('admin/contact', 'Admin\ContactController');
 
-Route::post('admin/blog/ajaximage', function(){
 
-    $file = Request::file('file');
-    $destinationPath = public_path().'/uploads/';
-    $filename = $file->getClientOriginalName();
-    $file->move($destinationPath, $filename);
-    echo url().'/uploads/'.$filename;
-});
+//UploadImage
+Route::post('admin/blog/ajaximage', 'Api\ImageController@uploadImage');

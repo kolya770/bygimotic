@@ -53,7 +53,8 @@ class LandingController extends Controller
      */
     public function categories()
     {
-        return view('categories');
+        $footer = Footer::find(1);
+        return view('categories', compact('footer', 'contact'));
     }
 
 }

@@ -6,12 +6,18 @@ use App\Models\Blog;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 use Intervention\Image\ImageManagerStatic as Image;
 
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -19,9 +25,10 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $blogs = Blog::latest()->get();
 
-        return view('admin.blog.index', compact('blogs'));
+        return view('admin.blog.index', compact('blogs','user'));
     }
 
     /**

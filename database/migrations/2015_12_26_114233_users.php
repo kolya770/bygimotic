@@ -20,7 +20,6 @@ class Users extends Migration
             $table->string('password', 60);
 
             $table->boolean('is_admin')->default(false);
-            $table->boolean('is_super_admin')->default(false);
 
             $table->rememberToken();
             $table->timestamps();
