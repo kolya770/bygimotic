@@ -33,36 +33,39 @@
                         <tr>
 
                             <th data-toggle="true" class="footable-visible footable-sortable footable-first-column">Product Name<span class="footable-sort-indicator"></span></th>
-                            <th data-hide="all" class="footable-sortable" style="display: none;">Description<span class="footable-sort-indicator"></span></th>
+                            <th data-hide="all" class="footable-sortable">Category<span class="footable-sort-indicator"></span></th>
                             <th data-hide="phone" class="footable-visible footable-sortable">Price<span class="footable-sort-indicator"></span></th>
-                            <th data-hide="phone,tablet" class="footable-sortable" style="display: none;">Quantity<span class="footable-sort-indicator"></span></th>
                             <th class="text-right footable-visible footable-last-column" data-sort-ignore="true">Action</th>
 
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="footable-even" style="display: table-row;">
                             @foreach($items as $item)
-                            <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>
-                                {{ $item->title }}
-                            </td>
+                                <tr class="footable-even" style="display: table-row;">
+                                    <td class="footable-visible footable-first-column"><span class="footable-toggle"></span>
+                                        {{ $item->title }}
+                                    </td>
 
-                            <td class="footable-visible">
-                                {{ $item->price }}
-                            </td>
+                                    <td class="footable-visible">
+                                        {{ $item->category }}
+                                    </td>
 
-                            <td class="text-right footable-visible footable-last-column">
-                                <div class="btn-group">
-                                    <a href="{{ url('admin/store/'. $item -> id . '/edit')}}">
-                                        <button class="btn-white btn btn-xs">edit</button>
-                                    </a>
-                                    {!! Form::model($item, ['method' => 'DELETE', 'action' => ['Admin\StoreController@destroy', $item->id]]) !!}
-                                    {!! Form::submit('delete', ['class' => 'btn-white btn btn-xs']) !!}
-                                    {!! Form::close() !!}
-                                </div>
-                            </td>
+                                    <td class="footable-visible">
+                                        {{ $item->price }}
+                                    </td>
+
+                                    <td class="text-right footable-visible footable-last-column">
+                                        <div class="btn-group">
+                                            <a href="{{ url('admin/store/'. $item -> id . '/edit')}}">
+                                                <button class="btn-white btn btn-xs">edit</button>
+                                            </a>
+                                            {!! Form::model($item, ['method' => 'DELETE', 'action' => ['Admin\StoreController@destroy', $item->id]]) !!}
+                                            {!! Form::submit('delete', ['class' => 'btn-white btn btn-xs']) !!}
+                                            {!! Form::close() !!}
+                                        </div>
+                                    </td>
+                                </tr>
                             @endforeach
-                        </tr>
                         </tbody>
                         <tfoot>
                         <tr>

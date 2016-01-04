@@ -16,8 +16,4 @@ class Items extends Model
         'keywords-meta'
     ];
 
-    public function image()
-    {
-        return $this->hasMany('App\Models\Image', 'items_id');
-    }
 }

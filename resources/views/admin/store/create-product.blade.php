@@ -40,7 +40,16 @@
                                 <div class="form-group">
                                     {!! Form::label('category', 'Category:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::select('category', ['toys', 'clothes', 'stationery', 'for babies', 'shoes'], null, ['class' => 'form-control'] ) !!}
+                                        {!! Form::select('category',
+                                            array(
+                                                'Toys' => 'Toys',
+                                                'Clothes' => 'Clothes',
+                                                'Stationery' => 'Stationery',
+                                                'For babies' => 'For babies',
+                                                'Shoes' => 'Shoes'
+                                            ),
+                                            null,
+                                            ['class' => 'form-control'] ) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -91,7 +100,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
-                                    <button class="btn btn-info">Add image</button>
+                                    <input type="file" size="60" />
                                 </div>
 
                             </div>
