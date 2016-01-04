@@ -2,22 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Blog;
+
 use Illuminate\Http\Request;
+use App\Models\Items;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
-use Intervention\Image\ImageManagerStatic as Image;
-
-
-class BlogController extends Controller
+class StoreController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('admin');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -25,10 +17,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $blogs = Blog::latest()->get();
-
-        return view('admin.blog.index', compact('blogs','user'));
+        $items = Items::latest()->get();
+        return view('admin.store.index', compact('items'));
     }
 
     /**
@@ -38,8 +28,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-
-        return view('admin.blog.create');
+        return view('admin.store.create-product');
     }
 
     /**
@@ -52,12 +41,17 @@ class BlogController extends Controller
     {
         $rec = $request->all();
 
-        Blog::firstOrCreate([
-            'title'        => $rec['title'],
-            'body'         => $rec['body']
+        Items::firstOrCreate([
+            'title'             => $rec['title'],
+            'description'       => $rec['description'],
+            'price'             => $rec['price'],
+            'category'          => $rec['category'],
+            'title-meta'        => $rec['title-meta'],
+            'description-meta'  => $rec['description-meta'],
+            'keywords-meta'     => $rec['keywords-meta']
         ]);
 
-        return redirect('/');
+        return redirect('/store');
     }
 
     /**
@@ -79,8 +73,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::findOrFail($id);
-        return view('admin.blog.edit', compact('blog'));
+        $item = Items::findOrFail($id);
+        return view('admin.store.edit', compact('item'));
     }
 
     /**
@@ -92,9 +86,9 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $blog = Blog::findOrFail($id);
-        $blog->update($request->all());
-        return redirect('admin/blog');
+        $item = Items::findOrFail($id);
+        $item->update($request->all());
+        return redirect('admin/store');
     }
 
     /**
@@ -105,11 +99,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blog = Blog::find($id);
-        $blog->delete();
-        return redirect('admin/blog');
+        $item = Items::find($id);
+        $item->delete();
+        return redirect('admin/store');
     }
-
-
-
 }

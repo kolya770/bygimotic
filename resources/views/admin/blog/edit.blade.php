@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="wrapper wrapper-content">
+
+    <div class="wrapper wrapper-content animated fadeInRight ecommerce">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="ibox float-e-margins">

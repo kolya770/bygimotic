@@ -37,8 +37,20 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="nav-label">E-commerce</span>
+                        <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{{url('admin/store')}}">View all products</a></li>
+                        <li><a href="{{url('admin/store/create')}}">Add new product</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="{{ url('admin/contact/1/edit')}}">Update Contact</a></li>
                 <li><a href="{{ url('admin/footer/1/edit')}}">Update Footer</a></li>
+
 
             </ul>
         </div>

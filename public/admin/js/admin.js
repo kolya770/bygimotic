@@ -4,27 +4,21 @@ $.ajaxSetup({
     }
 });
 
-
 $(document).ready(function() {
     $('#summernote').summernote({
 
-        //onkeyup: function(e) {
-        //    $('#lawsContent').val($('#summernote').code());
-        //},
         onImageUpload: function(files, editor, welEditable) {
             sendFile(files[0],editor,welEditable);
         }
     });
 
-
     $('.note-editable').addClass('style-editor');
 });
-
 
 function sendFile(file,editor,welEditable) {
     data = new FormData();
     data.append("file", file);
-    var url = '/admin/blog/ajaximage';
+    var url = '/admin/ajaximage';
     console.log('image upload:', file, editor, welEditable);
     console.log(data);
 

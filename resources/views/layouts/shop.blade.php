@@ -5,27 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Bygimotic | Dashboard</title>
+    <title>Bygimotic | Shop</title>
     {!! Html::style('admin/css/bootstrap.css') !!}
     {!! Html::style('admin/font-awesome/css/font-awesome.css') !!}
             <!-- Morris -->
     {!! Html::style('admin/css/plugins/morris/morris-0.4.3.min.css') !!}
-    {!! Html::style('admin/css/plugins/summernote/summernote.css') !!}
-    {!! Html::style('admin/css/plugins/summernote/summernote-bs3.css') !!}
     {!! Html::style('admin/css/animate.css') !!}
     {!! Html::style('admin/css/style.css') !!}
     {!! Html::style('admin/css/slick.css') !!}
     {!! Html::style('admin/css/slick-theme.css') !!}
-    {!! Html::style('admin/css/app.css') !!}
+    {!! Html::style('css/app.css') !!}
 
 </head>
 
 <body>
-@include('layouts.sidebar')
-<div id="page-wrapper" class="gray-bg">
-    @include('layouts.sidebar-top')
-    @yield('content')
-</div>
+@include('partials.first-screen')
+@include('partials.navbar')
+@yield('content')
+@include('partials.footer')
 <!-- Mainly scripts -->
 {!! HTML::script('admin/js/jquery-2.1.1.js') !!}
 {!! HTML::script('admin/js/bootstrap.min.js') !!}
@@ -39,10 +36,23 @@
         <!-- DROPZONE -->
 {!! HTML::script('admin/js/plugins/dropzone/dropzone.js') !!}
 
-        <!-- SUMMERNOTE -->
-{!! HTML::script('admin/js/plugins/summernote/summernote.min.js') !!}
-{!! HTML::script('admin/js/admin.js') !!}
+<script src="../js/main.js"></script>
+
 {!! HTML::script('admin/js/plugins/slick/slick.min.js') !!}
+
+<script>
+    $(document).ready(function(){
+
+
+        $('.product-images').slick({
+            dots: true
+        });
+
+    });
+
+</script>
+
+
 
 </body>
 </html>

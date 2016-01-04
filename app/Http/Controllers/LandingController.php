@@ -57,4 +57,17 @@ class LandingController extends Controller
         return view('categories', compact('footer', 'contact'));
     }
 
+    /**
+     * Display a categories
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function shop()
+    {
+        $footer = Footer::find(1);
+        return view('shop-magazine', compact('footer', 'contact'));
+    }
+
+
+
 }
