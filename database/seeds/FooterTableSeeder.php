@@ -12,9 +12,9 @@ class FooterTableSeeder extends Seeder
     public function run()
     {
         DB::table('footers')->insert([
-            'copyright' => 'ООО “Йцукен” , г. Киев, ул. Ленина 1а, оф. 405',
-            'number_1'  => '3 (097) 097 97 97',
-            'number_2'  => '3 (097) 097 97 99'
+            'copyright' => '"Веселый Бугимотик" , г. Киев, пр. Науки 11а',
+            'number_1'  => '+38 (044) 525-73-35 - игрушки',
+            'number_2'  => '+38 (044) 525-84-88 - одежда'
         ]);
     }
 }

@@ -100,7 +100,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
-                                    <input type="file" size="60" />
+                                    <input type="file" size="60" multiple=true>
                                 </div>
 
                             </div>

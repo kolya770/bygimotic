@@ -42,7 +42,7 @@
     border: none;
     background-color:  $bg-text-color-1;
     height: 60px;
-    z-index: 2;
+    z-index: 9999;
     width: 75%;
 
     .my-navbar {
@@ -94,7 +94,7 @@
           a {
             font-family: $font-R-black;
             color: $bg-text-color-2;
-            font-size: 0.688em;
+            font-size: 0.844em;
             font-weight: 900;
             line-height: 20px;
             text-align: left;
@@ -148,7 +148,7 @@
       width: 25%;
       left: 50%;
       margin-left: - 12.5%;
-      z-index: 200;
+      z-index: 99999;
        img {
          width: 100%;
        }
@@ -159,7 +159,7 @@
 
 
     @media #{$bootstrap-sm} {
-      z-index: 3;
+      z-index: 99999;
       img {
         width: 200px;
       }

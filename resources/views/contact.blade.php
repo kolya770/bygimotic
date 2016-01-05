@@ -4,9 +4,6 @@
     <div class="content">
         <div class="container content-width">
             <div class="row">
-                <div id="summernote">
-
-
                 <div class="col-xs-12 contact center-block my-navbar">
                     <div class="row">
                         <div class="col-xs-10 col-xs-offset-1">
@@ -28,8 +25,6 @@
                         </a>
                         <div id="map" class="map"></div>
                     </div>
-                </div>
-
                 </div>
             </div>
         </div>

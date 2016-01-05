@@ -19,7 +19,7 @@ class LandingController extends Controller
     public function index()
     {
         $footer = Footer::find(1);
-        $blogs = Blog::all();
+        $blogs = Blog::latest()->get();
         return view('landing', compact('footer', 'blogs'));
     }
 

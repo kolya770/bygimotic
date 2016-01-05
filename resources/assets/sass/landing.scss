@@ -1,5 +1,7 @@
 * .content {
-  z-index: 100
+  @media #{$bootstrap-sm} {
+      z-index: 100;
+    }
 }
 
 .content {
@@ -7,10 +9,8 @@
   margin-bottom: 70px;
   position: relative;
   @media #{$bootstrap-xs} {
-    margin-top: -95vh;
     .content-width {
       width: 75%;
-
     }
   }
 
@@ -27,7 +27,7 @@
         border-top-right-radius: 0;
       }
 
-      h1 {
+      h2 {
         font-family: $font-R-black;
         font-size: 2.250em;
         font-weight: 900;
@@ -80,7 +80,7 @@
 
     .content-width:nth-child(odd) {
       background-color: $bg-text-color-1;
-      h1 {
+      h2 {
         color: $bg-text-color-2;
       }
       p {
@@ -94,7 +94,7 @@
 
     .content-width:nth-child(even) {
       background-color: $bg-text-color-2;
-      h1 {
+      h2 {
         color: $bg-text-color-1;
       }
       p {
