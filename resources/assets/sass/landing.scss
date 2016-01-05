@@ -61,6 +61,11 @@
         outline: none;
         border: none;
       }
+
+      .info {
+        font-weight: 900;
+      }
+
     }
 
     .content-width:first-child {
@@ -102,6 +107,7 @@
         color: $bg-text-color-2;
       }
     }
+
   }
 }
 

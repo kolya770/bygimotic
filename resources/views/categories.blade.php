@@ -99,6 +99,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xs-12 guide">
+
+                    </div>
                 </div>
             </div>
         </div>

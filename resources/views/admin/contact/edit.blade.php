@@ -6,7 +6,7 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Form to update blog</h5>
+                        <h5>Обновление контактов</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -31,15 +31,15 @@
                         'class' => 'form-horizontal']) !!}
 
                         <div class="form-group">
-                            {!! Form::label('text', 'Enter the name of the text', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('text', 'Измените текст раздела Контактов', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
-                                {!! Form::text('text', null, ['class' => 'form-control']) !!}
+                                {!! Form::textarea('text', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-lg-offset-3 col-lg-9">
-                                {!! Form::submit('Update contact', ['class' => 'btn btn-lg']) !!}
+                                {!! Form::submit('Обновить', ['class' => 'btn btn-lg']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

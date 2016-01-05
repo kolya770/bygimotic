@@ -6,7 +6,7 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Form to create a new blog</h5>
+                        <h5>Создать новый блог</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -33,20 +33,20 @@
 
                         )) !!}
                         <div class="form-group">
-                            {!! Form::label('title', 'Enter the name of the blog', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('title', 'Название блога', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
                                 {!! Form::text('title', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
                         <div class="form-group">
-                            {!! Form::label('body', 'Some text', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('body', 'Описание блога', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
                                 {!! Form::textarea('body', null, ['class' => 'form-control', 'id' => 'summernote']) !!}
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-offset-3 col-lg-9">
-                                {!! Form::submit('Create new blog', ['class' => 'btn btn-lg']) !!}
+                                {!! Form::submit('Создать блог', ['class' => 'btn btn-lg']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

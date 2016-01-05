@@ -6,7 +6,7 @@
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Form to update blog</h5>
+                        <h5>Обновление футера</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -31,21 +31,21 @@
                         'class' => 'form-horizontal']) !!}
 
                         <div class="form-group">
-                            {!! Form::label('copyright', 'Enter the name of the copyright', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('copyright', 'Название копирайта', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
                                 {!! Form::text('copyright', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('number_1', 'Enter the phone number 1', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('number_1', 'Первый номер телефона', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
                                 {!! Form::text('number_1', null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            {!! Form::label('number_2', 'Enter the phone number 2', ['class' => 'col-lg-3 control-label']) !!}
+                            {!! Form::label('number_2', 'Второй номер телефона', ['class' => 'col-lg-3 control-label']) !!}
                             <div class="col-lg-9">
                                 {!! Form::text('number_2', null, ['class' => 'form-control']) !!}
                             </div>
@@ -53,7 +53,7 @@
 
                         <div class="form-group">
                             <div class="col-lg-offset-3 col-lg-9">
-                                {!! Form::submit('Update blog', ['class' => 'btn btn-lg']) !!}
+                                {!! Form::submit('Обновить', ['class' => 'btn btn-lg']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

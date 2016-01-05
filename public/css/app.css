@@ -534,6 +534,8 @@ body {
         box-shadow: none;
         outline: none;
         border: none; }
+      .content .content-width .info {
+        font-weight: 900; }
     .content .content-width:first-child {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
@@ -662,7 +664,7 @@ body {
     @media (min-width: 768px) {
       .contact .info {
         text-align: left;
-        max-width: 160px; } }
+        max-width: 175px; } }
   .contact .write-btn {
     background-color: #9063a6;
     height: 40px;
@@ -739,7 +741,9 @@ body {
     padding: 0 10%; }
   .categories .image-click {
     padding: 0;
-    margin-bottom: 70px; }
+    overflow: hidden;
+    height: 100%;
+    clip: rect(0, auto, 18em, auto); }
     .categories .image-click .padding {
       padding: 0; }
     .categories .image-click .background-1 {
@@ -873,6 +877,12 @@ body {
       opacity: 0.9; }
     .categories .image-click .hover-action:hover img {
       opacity: 0.3; }
+  .categories .guide {
+    margin-bottom: 70px;
+    height: 5px;
+    background-color: #ffffff;
+    position: relative;
+    margin-top: -3px; }
 
 .product-box {
   padding: 0;

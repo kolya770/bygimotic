@@ -5,7 +5,7 @@
         <div class="col-lg-10 col-lg-offset-1">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>All blogs</h5>
+                    <h5>Все блоги</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -29,7 +29,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Header of the blog</th>
+                            <th>Название блога</th>
                         </tr>
                         </thead>
                         <tbody>

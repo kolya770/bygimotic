@@ -8,8 +8,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-
-
 class BlogController extends Controller
 {
     public function __construct()
@@ -56,7 +54,7 @@ class BlogController extends Controller
             'body'         => $rec['body']
         ]);
 
-        return redirect('/');
+        return redirect('admin/blog');
     }
 
     /**
@@ -108,7 +106,5 @@ class BlogController extends Controller
         $blog->delete();
         return redirect('admin/blog');
     }
-
-
 
 }

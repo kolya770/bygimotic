@@ -17,7 +17,10 @@
 
   .image-click {
     padding: 0;
-    margin-bottom: 70px;
+    overflow: hidden;
+    height: 100%;
+    clip: rect(0, auto, 18em, auto);
+
 
     .padding {
       padding: 0;
@@ -148,6 +151,13 @@
         opacity: 0.3;
       }
     }
+  }
+  .guide {
+    margin-bottom: 70px;
+    height: 5px;
+    background-color: $bg-text-color-1;
+    position: relative;
+    margin-top: -3px;
   }
 }
 

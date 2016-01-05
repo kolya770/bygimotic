@@ -7,8 +7,8 @@
             <div class="col-lg-12">
                 <div class="tabs-container">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true"> Product info</a></li>
-                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false"> Images</a></li>
+                        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">Товар</a></li>
+                        <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Картинки для товара</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
@@ -17,50 +17,59 @@
                                 {!! Form::model($item,['method' => 'PATCH', 'action' => ['Admin\StoreController@update', $item->id],
                                     'class' => 'form-horizontal', 'enctype' => 'multipart/form-data']) !!}
                                 <div class="form-group">
-                                    {!! Form::label('title', 'Name:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('title', 'Название товара:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('title', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('description', 'Description:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('description', 'Описание:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::textarea('description', null, ['class' => 'form-control', 'id' => 'summernote']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('price', 'Price:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('price', 'Цена:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('price', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('category', 'Category:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('category', 'Категория:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::select('category', ['toys', 'clothes', 'stationery', 'for babies', 'shoes'], null, ['class' => 'form-control'] ) !!}
+                                        {!! Form::select('category',
+                                            array(
+                                                'Игрушки' => 'Игрушки',
+                                                'Одежда' => 'Одежда',
+                                                'Канцтовары' => 'Канцтовары',
+                                                'Для малышей' => 'Для малышей',
+                                                'Обувь' => 'Обувь'
+                                            ),
+                                            null,
+                                            ['class' => 'form-control'] ) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('title-meta', 'Meta Tag Title:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('title-meta', 'Мета-тег название товара:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('title-meta', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('description-meta', 'Meta Tag Description:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('description-meta', 'Мета-тег описания:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('description-meta', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('keywords-meta', 'Meta Tag Keywords:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('keywords-meta', 'Мета-тег ключевых слов:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
                                         {!! Form::text('keywords-meta', null, ['class' => 'form-control',]) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        {!! Form::submit('Update product', ['class' => 'btn btn-lg']) !!}
+                                        {!! Form::submit('Обновить товар', ['class' => 'btn btn-lg']) !!}
                                     </div>
                                 </div>
                                 {!! Form::close() !!}
@@ -70,26 +79,16 @@
                         <div id="tab-2" class="tab-pane">
                             <div class="panel-body">
 
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-stripped">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Image preview
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="">foto
-                                            </td>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <button class="btn btn-info">Add image</button>
+                                {!! Form::open(['action'=> 'Api\ImageController@dropzoneUploadImages', 'enctype' => 'multipart/form-data','method' => 'POST', 'files'=>'true', 'id' => 'my-dropzone' , 'class' => 'dropzone']) !!}
+                                <div class="dz-message" style="height:200px; text-align: center;">
+                                    Нажмите сюда, или положите файлы
                                 </div>
+                                <div class="fallback">
+                                    <input name="file" type="file" />
+                                </div>
+                                <div class="dropzone-previews"></div>
+                                <button type="submit" class="btn btn-success" id="submit">Save</button>
+                                {!! Form::close() !!}
 
                             </div>
                         </div>

@@ -58,7 +58,7 @@ class StoreController extends Controller
 
 
 
-        return redirect('/store');
+        return redirect('admin/store');
     }
 
     /**
