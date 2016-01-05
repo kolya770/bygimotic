@@ -13,8 +13,12 @@ class Images extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->string('image');
+            $table->integer('image_id')->length(11)->unsigned();
+            $table->foreign('image_id')->references('id')->on('images');
             $table->timestamps();
         });
     }

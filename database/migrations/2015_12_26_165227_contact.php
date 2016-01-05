@@ -13,6 +13,8 @@ class Contact extends Migration
     public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
             $table->text('text');
             $table->timestamps();
