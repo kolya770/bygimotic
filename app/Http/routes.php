@@ -39,4 +39,5 @@ Route::resource('admin/contact', 'Admin\ContactController');
 Route::resource('admin/store', 'Admin\StoreController');
 
 //UploadImage
-Route::post('admin/ajaximage', 'Api\ImageController@uploadImage');
+Route::post('admin/ajaximage',  'Api\ImageController@uploadImage');
+Route::post('admin/ajaximage2', 'Api\ImageController@dropzoneUploadImages');

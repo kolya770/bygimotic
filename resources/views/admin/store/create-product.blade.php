@@ -17,6 +17,7 @@
                                     'action' => 'Admin\StoreController@store',
                                     'class' => 'form-horizontal',
                                     'enctype' => 'multipart/form-data'
+
                                     ))
                                 !!}
                                 <div class="form-group">
@@ -70,6 +71,7 @@
                                         {!! Form::text('keywords-meta', null, ['class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
                                         {!! Form::submit('Add protuct', ['class' => 'btn btn-lg']) !!}
@@ -82,26 +84,16 @@
                         <div id="tab-2" class="tab-pane">
                             <div class="panel-body">
 
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-stripped">
-                                        <thead>
-                                        <tr>
-                                            <th>
-                                                Image preview
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="">foto
-                                            </td>
-
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <input type="file" size="60" multiple=true>
-                                </div>
+                                    {!! Form::open(['action'=> 'Api\ImageController@dropzoneUploadImages', 'method' => 'POST', 'files'=>'true', 'id' => 'my-dropzone' , 'class' => 'dropzone']) !!}
+                                    <div class="dz-message" style="height:200px;">
+                                        Drop your files here
+                                    </div>
+                                    <div class="fallback">
+                                        <input name="file" type="file" />
+                                    </div>
+                                    <div class="dropzone-previews"></div>
+                                    <button type="submit" class="btn btn-success" id="submit">Save</button>
+                                    {!! Form::close() !!}
 
                             </div>
                         </div>

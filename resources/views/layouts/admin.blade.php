@@ -12,6 +12,7 @@
     {!! Html::style('admin/css/plugins/morris/morris-0.4.3.min.css') !!}
     {!! Html::style('admin/css/plugins/summernote/summernote.css') !!}
     {!! Html::style('admin/css/plugins/summernote/summernote-bs3.css') !!}
+    {!! Html::style('admin/css/plugins/dropzone/dropzone.css') !!}
     {!! Html::style('admin/css/animate.css') !!}
     {!! Html::style('admin/css/style.css') !!}
     {!! Html::style('admin/css/slick.css') !!}
@@ -38,6 +39,41 @@
 
         <!-- DROPZONE -->
 {!! HTML::script('admin/js/plugins/dropzone/dropzone.js') !!}
+
+<script>
+    $(document).ready(function(){
+
+        Dropzone.options.myDropzone = {
+            autoProcessQueue: false,
+            uploadMultiple: true,
+            maxFilezise: 10,
+            maxFiles: 2,
+
+            init: function() {
+                var submitBtn = document.querySelector("#submit");
+                myDropzone = this;
+
+                submitBtn.addEventListener("click", function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    myDropzone.processQueue();
+                });
+                this.on("addedfile", function(file) {
+                    alert("file uploaded");
+                });
+
+                this.on("complete", function(file) {
+                    myDropzone.removeFile(file);
+                });
+
+                this.on("success",
+                        myDropzone.processQueue.bind(myDropzone)
+                );
+            }
+        };
+
+    });
+</script>
 
         <!-- SUMMERNOTE -->
 {!! HTML::script('admin/js/plugins/summernote/summernote.min.js') !!}

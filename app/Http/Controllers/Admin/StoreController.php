@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\Items;
+use App\Models\Images;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -50,6 +51,12 @@ class StoreController extends Controller
             'description-meta'  => $rec['description-meta'],
             'keywords-meta'     => $rec['keywords-meta']
         ]);
+
+//        Images::firstOrCreate([
+//            'image' => $rec['file']
+//        ]);
+
+
 
         return redirect('/store');
     }

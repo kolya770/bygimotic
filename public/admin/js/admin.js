@@ -13,6 +13,8 @@ $(document).ready(function() {
     });
 
     $('.note-editable').addClass('style-editor');
+
+
 });
 
 function sendFile(file,editor,welEditable) {
@@ -35,3 +37,5 @@ function sendFile(file,editor,welEditable) {
         }
     });
 }
+
+
