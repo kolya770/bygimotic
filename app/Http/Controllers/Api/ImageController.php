@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Images;
 use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -28,9 +29,9 @@ class ImageController extends Controller
 
     public function dropzoneUploadImages()
     {
-        dd('1234');
+
         $path = public_path().'/uploads/';
-        $files = Input::file('file');
+        $files = Images::create(Input::file('image'));
 
         foreach($files as $file) {
             $fileName = $file->getClientOriginalName();

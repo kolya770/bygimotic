@@ -84,7 +84,7 @@
                         <div id="tab-2" class="tab-pane">
                             <div class="panel-body">
 
-                                    {!! Form::open(['action'=> 'Api\ImageController@dropzoneUploadImages', 'method' => 'POST', 'files'=>'true', 'id' => 'my-dropzone' , 'class' => 'dropzone']) !!}
+                                    {!! Form::open(['action'=> 'Api\ImageController@dropzoneUploadImages', 'enctype' => 'multipart/form-data','method' => 'POST', 'files'=>'true', 'id' => 'my-dropzone' , 'class' => 'dropzone']) !!}
                                     <div class="dz-message" style="height:200px;">
                                         Drop your files here
                                     </div>
