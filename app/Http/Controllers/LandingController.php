@@ -33,7 +33,9 @@ class LandingController extends Controller
         $footer = Footer::find(1);
         $contact = Contact::find(1);
 
-        return view('contact', compact('footer', 'contact'));
+        $google_key = env('GOOGLE_MAPS_KEY');
+
+        return view('contact', compact('footer', 'contact', 'google_key'));
     }
 
     /**
