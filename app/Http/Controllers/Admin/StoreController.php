@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 
 use Illuminate\Http\Request;
+
 use App\Models\Items;
 use App\Models\Images;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input as Input;
+ use Response;
 
 class StoreController extends Controller
 {
@@ -46,28 +49,38 @@ class StoreController extends Controller
      */
     public function store(Request $request)
     {
-        $rec = $request->all();
+        $item = new Items();
+        $item->title        = $request->title;
+        $item->description  = $request->description;
+        $item->price        = $request->price;
+        $item->category     = $request->category;
+        $item->title_meta   = $request->title_meta;
+        $item->description_meta = $request->description_meta;
+        $item->keywords_meta    = $request->keywords_meta;
 
-        Items::firstOrCreate([
-            'title'         => $rec['title'],
-            'description'   => $rec['description'],
-            'price'         => $rec['price'],
-            'category'      => $rec['category'],
-            'title-meta'    => $rec['title-meta'],
-            'description-meta'  => $rec['description-meta'],
-            'keywords-meta'     => $rec['keywords-meta'],
-        ]);
+        $item->save();
 
         $img = new Images();
 
-//        $item = Items::find($id);
-        $img->items_id = $request->id;
+        $files = Input::file('file');
 
-        dd($img);
+
+        $path = public_path() . '/uploads/';
+
+        foreach($files as $file) {
+            $fileName = $file->getClientOriginalName();
+            $file->move($path, $fileName);
+            $qq = $path . $fileName;
+        }
+
+        $route_image = $path . $qq;
+        $img->image = $route_image;
+        $img->items_id = $item->id;
+
         $img->save();
+        
 
-
-        return redirect('admin/store');
+        //return redirect('admin/store');
     }
 
     /**

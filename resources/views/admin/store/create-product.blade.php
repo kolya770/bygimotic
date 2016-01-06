@@ -54,21 +54,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('title-meta', 'Мета-тег title :', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('title_meta', 'Мета-тег title :', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('title-meta', null, ['id' => 'meta-title', 'class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('title_meta', null, ['id' => 'meta-title', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('description-meta', 'Мета-тег description:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('description_meta', 'Мета-тег description:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('description-meta', null, ['id' => 'meta-desc', 'class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('description_meta', null, ['id' => 'meta-desc', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('keywords-meta', 'Мета-тег keywords:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('keywords_meta', 'Мета-тег keywords:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('keywords-meta', null, ['id' => 'meta-keywords', 'class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('keywords_meta', null, ['id' => 'meta-keywords', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
 
@@ -87,6 +87,10 @@
                                         'class' => 'dropzone'
                                         ])
                                     !!}
+
+                                     <div class="fallback">
+                                            <input name="file" type="file">
+                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-sm-12">
@@ -113,7 +117,7 @@
             Dropzone.autoDiscover = false;
 
             var myDropzone = new Dropzone('.dropzone', {
-                paramName: "files",
+                paramName: "file",
                 //maxFilesize: 3.0,
                 maxFiles: 3,
                 parallelUploads: 10000,
@@ -133,10 +137,11 @@
 
             $('#add-product').on('click', function () {
                 myDropzone.processQueue();
-
-
+                //setTimeout(redirect, 1000);
             });
-
+            function redirect() {
+                window.location.replace("{{ url('admin/store') }}")
+            }
         });
     </script>
 @endsection

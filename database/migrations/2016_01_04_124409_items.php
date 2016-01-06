@@ -20,9 +20,9 @@ class Items extends Migration
             $table->text('description');
             $table->decimal('price', 10,2);
             $table->text('category');
-            $table->string('title-meta', 80);
-            $table->string('description-meta', 250);
-            $table->string('keywords-meta', 200);
+            $table->string('title_meta', 80);
+            $table->string('description_meta', 250);
+            $table->string('keywords_meta', 200);
             $table->timestamps();
         });
     }

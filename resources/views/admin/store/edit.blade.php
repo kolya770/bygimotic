@@ -50,21 +50,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('title-meta', 'Мета-тег название товара:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('title_meta', 'Мета-тег название товара:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('title-meta', null, ['class' => 'form-control']) !!}
+                                        {!! Form::text('title_meta', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('description-meta', 'Мета-тег описания:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('description_meta', 'Мета-тег описания:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('description-meta', null, ['class' => 'form-control']) !!}
+                                        {!! Form::text('description_meta', null, ['class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('keywords-meta', 'Мета-тег ключевых слов:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('keywords_meta', 'Мета-тег ключевых слов:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('keywords-meta', null, ['class' => 'form-control',]) !!}
+                                        {!! Form::text('keywords_meta', null, ['class' => 'form-control',]) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
