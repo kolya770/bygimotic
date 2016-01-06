@@ -10,13 +10,13 @@ class Images extends Model
 
     protected $fillable = [
         'image',
-        'item_id'
+        'items_id'
     ];
 
     public $timestamps = false;
 
     public function item()
     {
-        return $this->belongsTo('App\Models\Items', 'item_id');
+        return $this->belongsTo('App\Models\Items', 'items_id');
     }
 }

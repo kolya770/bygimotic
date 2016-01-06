@@ -128,6 +128,7 @@
                         formData.append(input.attr('name'), input.val());
                     });
                 }
+
             });
 
             $('#add-product').on('click', function () {

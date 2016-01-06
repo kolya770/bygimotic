@@ -16,9 +16,9 @@ class Items extends Model
         'keywords-meta'
     ];
 
-    public function image()
+    public function images()
     {
-        return $this->hasMany('App\Models\Images', 'item_id');
+        return $this->hasMany('App\Models\Images', 'items_id');
     }
 
 }

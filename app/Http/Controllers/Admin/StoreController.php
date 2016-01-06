@@ -11,6 +11,11 @@ use App\Http\Controllers\Controller;
 
 class StoreController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -43,9 +48,26 @@ class StoreController extends Controller
     {
         $rec = $request->all();
 
-        dd($rec);
+        Items::firstOrCreate([
+            'title'         => $rec['title'],
+            'description'   => $rec['description'],
+            'price'         => $rec['price'],
+            'category'      => $rec['category'],
+            'title-meta'    => $rec['title-meta'],
+            'description-meta'  => $rec['description-meta'],
+            'keywords-meta'     => $rec['keywords-meta'],
+        ]);
 
-        //return redirect('admin/store');
+        $img = new Images();
+
+//        $item = Items::find($id);
+        $img->items_id = $request->id;
+
+        dd($img);
+        $img->save();
+
+
+        return redirect('admin/store');
     }
 
     /**

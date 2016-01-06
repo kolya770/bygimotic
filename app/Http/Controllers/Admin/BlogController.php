@@ -49,6 +49,7 @@ class BlogController extends Controller
     {
         $rec = $request->all();
 
+
         Blog::firstOrCreate([
             'title' => $rec['title'],
             'body'  => $rec['body']

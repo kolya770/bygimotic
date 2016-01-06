@@ -17,8 +17,8 @@ class Images extends Migration
 
             $table->increments('id');
             $table->string('image');
-            $table->integer('item_id')->length(11)->unsigned();
-            $table->foreign('item_id')->references('id')->on('items');
+            $table->integer('items_id')->length(11)->unsigned();
+            $table->foreign('items_id')->references('id')->on('items');
             $table->timestamps();
         });
     }
