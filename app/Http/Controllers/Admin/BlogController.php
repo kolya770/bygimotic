@@ -15,6 +15,7 @@ class BlogController extends Controller
         $this->middleware('auth');
         $this->middleware('admin');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +23,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        $user  = Auth::user();
         $blogs = Blog::latest()->get();
 
         return view('admin.blog.index', compact('blogs','user'));
@@ -35,7 +36,6 @@ class BlogController extends Controller
      */
     public function create()
     {
-
         return view('admin.blog.create');
     }
 
@@ -50,8 +50,8 @@ class BlogController extends Controller
         $rec = $request->all();
 
         Blog::firstOrCreate([
-            'title'        => $rec['title'],
-            'body'         => $rec['body']
+            'title' => $rec['title'],
+            'body'  => $rec['body']
         ]);
 
         return redirect('admin/blog');
@@ -77,6 +77,7 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::findOrFail($id);
+
         return view('admin.blog.edit', compact('blog'));
     }
 
@@ -91,6 +92,7 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $blog->update($request->all());
+
         return redirect('admin/blog');
     }
 
@@ -104,6 +106,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $blog->delete();
+
         return redirect('admin/blog');
     }
 

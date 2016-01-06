@@ -14,6 +14,7 @@ class ContactController extends Controller
         $this->middleware('auth');
         $this->middleware('admin');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -80,6 +81,7 @@ class ContactController extends Controller
     {
         $contact = Contact::findOrFail($id);
         $contact->update($request->all());
+        
         return redirect('/contacts');
     }
 

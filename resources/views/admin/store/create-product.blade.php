@@ -16,25 +16,26 @@
                                 {!! Form::open(array(
                                     'action' => 'Admin\StoreController@store',
                                     'class' => 'form-horizontal',
-                                    'enctype' => 'multipart/form-data'
+                                    'enctype' => 'multipart/form-data',
+                                    'id' => 'product-text-data'
                                     ))
                                 !!}
                                 <div class="form-group">
                                     {!! Form::label('title', 'Название товара:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('title', null, ['class' => 'form-control', 'placeholder'=>'Медвежонок ТЕДИ']) !!}
+                                        {!! Form::text('title', null, ['id' => 'product-name', 'class' => 'form-control', 'placeholder'=>'Медвежонок ТЕДИ']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('description', 'Описание:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::textarea('description', null, ['class' => 'form-control', 'id' => 'summernote']) !!}
+                                        {!! Form::textarea('description', null, ['id' => 'product-desc', 'class' => 'form-control']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     {!! Form::label('price', 'Цена:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('price', null, ['class' => 'form-control', 'placeholder'=>'160.00']) !!}
+                                        {!! Form::text('price', null, ['id' => 'product-price', 'class' => 'form-control', 'placeholder'=>'160.00']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -53,29 +54,24 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('title-meta', 'Мета-тег названия товара :', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('title-meta', 'Мета-тег title :', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('title-meta', null, ['class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('title-meta', null, ['id' => 'meta-title', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('description-meta', 'Мета-тег описания:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('description-meta', 'Мета-тег description:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('description-meta', null, ['class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('description-meta', null, ['id' => 'meta-desc', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('keywords-meta', 'Мета-тег ключевых слов:', ['class' => 'col-sm-2 control-label']) !!}
+                                    {!! Form::label('keywords-meta', 'Мета-тег keywords:', ['class' => 'col-sm-2 control-label']) !!}
                                     <div class="col-sm-10">
-                                        {!! Form::text('keywords-meta', null, ['class' => 'form-control', 'placeholder'=>'...']) !!}
+                                        {!! Form::text('keywords-meta', null, ['id' => 'meta-keywords', 'class' => 'form-control', 'placeholder'=>'...']) !!}
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="col-lg-offset-2 col-lg-10">
-                                        {!! Form::submit('Добавить товар', ['class' => 'btn btn-lg']) !!}
-                                    </div>
-                                </div>
                                 {!! Form::close() !!}
                             </div>
                         </div>
@@ -83,15 +79,20 @@
                         <div id="tab-2" class="tab-pane">
                             <div class="panel-body">
 
-                                    {!! Form::open(['action'=> 'Api\ImageController@dropzoneUploadImages', 'enctype' => 'multipart/form-data','method' => 'POST', 'files'=>'true', 'id' => 'my-dropzone' , 'class' => 'dropzone']) !!}
-                                    <div class="dz-message" style="height:200px; text-align: center;">
-                                        Нажмите сюда, или положите файлы
+                                    {!! Form::open(['action'=> 'Admin\StoreController@store',
+                                        'enctype' => 'multipart/form-data',
+                                        'method' => 'POST',
+                                        'files'=>'true',
+                                        'id' => 'my-dropzone',
+                                        'class' => 'dropzone'
+                                        ])
+                                    !!}
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            {!! Form::button('Добавить товар', ['class' => 'btn btn-lg', 'id' => 'add-product']) !!}
+                                        </div>
                                     </div>
-                                    <div class="fallback">
-                                        <input name="file" type="file" />
-                                    </div>
-                                    <div class="dropzone-previews"></div>
-                                    <button type="submit" class="btn btn-success" id="submit">Save</button>
                                     {!! Form::close() !!}
 
                             </div>
@@ -101,6 +102,40 @@
                 </div>
             </div>
         </div>
-
     </div>
+@endsection
+
+@section('js')
+
+    <script>
+        $(document).ready(function(){
+
+            Dropzone.autoDiscover = false;
+
+            var myDropzone = new Dropzone('.dropzone', {
+                paramName: "files",
+                //maxFilesize: 3.0,
+                maxFiles: 3,
+                parallelUploads: 10000,
+                uploadMultiple: true,
+                autoProcessQueue: false,
+
+                sending: function(file, xhr, formData) {
+
+                    $("form#product-text-data :input").each(function() {
+                        var input = $(this);
+
+                        formData.append(input.attr('name'), input.val());
+                    });
+                }
+            });
+
+            $('#add-product').on('click', function () {
+                myDropzone.processQueue();
+
+
+            });
+
+        });
+    </script>
 @endsection

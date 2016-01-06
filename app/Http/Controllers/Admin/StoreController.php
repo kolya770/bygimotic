@@ -19,6 +19,7 @@ class StoreController extends Controller
     public function index()
     {
         $items = Items::latest()->get();
+
         return view('admin.store.index', compact('items'));
     }
 
@@ -42,23 +43,9 @@ class StoreController extends Controller
     {
         $rec = $request->all();
 
-        Items::firstOrCreate([
-            'title'             => $rec['title'],
-            'description'       => $rec['description'],
-            'price'             => $rec['price'],
-            'category'          => $rec['category'],
-            'title-meta'        => $rec['title-meta'],
-            'description-meta'  => $rec['description-meta'],
-            'keywords-meta'     => $rec['keywords-meta']
-        ]);
+        dd($rec);
 
-//        Images::firstOrCreate([
-//            'image' => $rec['file']
-//        ]);
-
-
-
-        return redirect('admin/store');
+        //return redirect('admin/store');
     }
 
     /**
@@ -81,6 +68,7 @@ class StoreController extends Controller
     public function edit($id)
     {
         $item = Items::findOrFail($id);
+
         return view('admin.store.edit', compact('item'));
     }
 
@@ -95,6 +83,7 @@ class StoreController extends Controller
     {
         $item = Items::findOrFail($id);
         $item->update($request->all());
+
         return redirect('admin/store');
     }
 
@@ -108,6 +97,7 @@ class StoreController extends Controller
     {
         $item = Items::find($id);
         $item->delete();
+
         return redirect('admin/store');
     }
 }

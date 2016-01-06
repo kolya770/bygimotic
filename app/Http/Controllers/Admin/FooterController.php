@@ -14,6 +14,7 @@ class FooterController extends Controller
         $this->middleware('auth');
         $this->middleware('admin');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -80,7 +81,8 @@ class FooterController extends Controller
     {
         $footer = Footer::findOrFail($id);
         $footer->update($request->all());
-        return redirect('/');
+
+        return redirect('/admin/footer/1/edit');
     }
 
     /**
